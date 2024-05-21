@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'flipping_cards.dart';
+import 'half_circle.dart';
 import 'presentation.dart';
 
 void main() {
@@ -61,6 +62,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('Presentation'),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const HalfCircle(),
+                  ),
+                );
+              },
+              child: const Text('Half Circle'),
             ),
           ],
         ),
