@@ -37,7 +37,7 @@ class _AnimatedButton1State extends State<AnimatedButton1> with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black38,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text('Animated Button'),
       ),
@@ -51,13 +51,11 @@ class _AnimatedButton1State extends State<AnimatedButton1> with SingleTickerProv
               Colors.white,
               value,
             );
-
             final textColor = Color.lerp(
               Colors.white,
               Colors.black,
               value,
             );
-
             final angle = lerpDouble(0, pi, value) ?? 0.0;
             final height = lerpDouble(_minHeight, _maxHeight, value);
             final textSizeTitle = lerpDouble(20, 25, value);

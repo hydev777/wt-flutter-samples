@@ -1,16 +1,12 @@
 # wt_flutter_samples
 
-A new Flutter project.
+This a series of animations demostrations and experimentation.
 
-## Getting Started
+Flipping cards:
 
-This project is a starting point for a Flutter application.
+![ezgif-2-db25fe286b](https://github.com/hydev777/wt-flutter-samples/assets/84458390/393d2d14-e968-4b00-a747-17a217f3906b)
 
-A few resources to get you started if this is your first Flutter project:
+Information presentation:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![ezgif-2-06c69d11b4](https://github.com/hydev777/wt-flutter-samples/assets/84458390/97b06f83-b6e6-45dc-8e7b-dff563a5ce40)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
