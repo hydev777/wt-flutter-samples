@@ -24,6 +24,7 @@ class _FlippingCardState extends State<FlippingCard>
     _animation = Tween<double>(begin: 0.0, end: 2 * pi).animate(_controler);
 
     _controler.repeat();
+
   }
 
   @override
