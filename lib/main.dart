@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'animated_button_1.dart';
+import 'dynamic_check_mark.dart';
 import 'flipping_cards.dart';
 import 'half_circle.dart';
 import 'presentation.dart';
@@ -48,16 +49,6 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimatedButton1(),
-                  ),
-                );
-              },
-              child: const Text('Animated Button'),
-            ),
-            FilledButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute<void>(
                     builder: (BuildContext context) => const FlippingCard(),
                   ),
                 );
@@ -83,6 +74,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('Half Circle'),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const AnimatedButton1(),
+                  ),
+                );
+              },
+              child: const Text('Animated Button'),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const DynamicCheckMark(),
+                  ),
+                );
+              },
+              child: const Text('Dynamic Check Mark'),
             ),
           ],
         ),
