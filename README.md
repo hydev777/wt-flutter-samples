@@ -14,4 +14,9 @@ Animated Button 1:
 
 ![ezgif-1-65f5fe224c](https://github.com/hydev777/wt-flutter-samples/assets/84458390/32d9e734-79a6-4186-b407-2da1cdce1e8f)
 
+Animated checkbox 1:
+
+![ezgif-7-afcf662aa8](https://github.com/hydev777/wt-flutter-samples/assets/84458390/63c363c2-2fb2-4103-afc3-7ec73eadbdb2)
+
+
 
