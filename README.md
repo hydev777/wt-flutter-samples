@@ -22,4 +22,9 @@ Animated align text:
 
 ![ezgif-5-f4c6252239](https://github.com/hydev777/wt-flutter-samples/assets/84458390/0bef1726-ca71-4201-bd83-81c836b49268)
 
+Animated text movement:
+
+![ezgif-5-786cae037b](https://github.com/hydev777/wt-flutter-samples/assets/84458390/279d7087-716f-4feb-9345-d40c4c748f77)
+
+
 
