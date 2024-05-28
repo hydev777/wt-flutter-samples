@@ -1,4 +1,4 @@
-# wt_flutter_samples
+# Animations examples
 
 This is a series of animations demostrations and experimentation.
 
