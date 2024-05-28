@@ -1,6 +1,6 @@
 # wt_flutter_samples
 
-This a series of animations demostrations and experimentation.
+This is a series of animations demostrations and experimentation.
 
 Flipping cards:
 
