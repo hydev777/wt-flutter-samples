@@ -38,7 +38,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 180),
     );
 
     _animation1 = Tween<Alignment>(
@@ -60,10 +60,10 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
               final textBoldLerp = FontWeight.lerp(
                   FontWeight.normal, FontWeight.bold, _controller.value);
               final containerWidthLerp =
-                  lerpDouble(140, 160, _controller.value);
+                  lerpDouble(140, 180, _controller.value);
               final containerBorderRadius = BorderRadius.lerp(
                   BorderRadius.circular(10),
-                  BorderRadius.circular(20),
+                  BorderRadius.circular(15),
                   _controller.value);
 
               return Stack(
@@ -204,12 +204,18 @@ class BoxAnimated extends StatelessWidget {
       onTap: onTap,
       child: Align(
         alignment: alignment,
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
           decoration: BoxDecoration(
-            color: Colors.black45,
+            color: currentAnimatedTextLocation == alignment
+                ? Colors.blue
+                : Colors.black38,
             borderRadius: currentAnimatedTextLocation == alignment
                 ? containerBorderRadius
                 : BorderRadius.circular(10),
+            border: currentAnimatedTextLocation == alignment
+                ? Border.all(width: 2, color: Colors.black)
+                : Border.all(width: 0, color: Colors.transparent),
           ),
           height: currentAnimatedTextLocation == alignment
               ? containerHeightLerp
