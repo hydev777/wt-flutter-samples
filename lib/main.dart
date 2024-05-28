@@ -7,6 +7,7 @@ import 'dynamic_check_mark.dart';
 import 'flipping_cards.dart';
 import 'half_circle.dart';
 import 'presentation.dart';
+import 'three_d_planes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -119,7 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimatedAlignExample1(),
+                    builder: (BuildContext context) =>
+                        const AnimatedAlignExample1(),
                   ),
                 );
               },
@@ -132,11 +134,25 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimatedAlignText(),
+                    builder: (BuildContext context) =>
+                        const AnimatedAlignText(),
                   ),
                 );
               },
               child: const Text('Animated Align Text'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const ThreeDPlanes(),
+                  ),
+                );
+              },
+              child: const Text('3D Planes'),
             ),
           ],
         ),
