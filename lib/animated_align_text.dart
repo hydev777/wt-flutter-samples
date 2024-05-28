@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' show pi;
 import 'dart:ui' show lerpDouble;
 
 class AnimatedAlignText extends StatefulWidget {
@@ -13,6 +14,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
   late AnimationController _controller;
   late Animation _animation1;
   Alignment currentLocation = Alignment.topLeft;
+  late Animation<double> _animation;
 
   void move(Alignment to) {
     _animation1 = Tween(
@@ -21,7 +23,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
     ).animate(
       CurvedAnimation(
         parent: _controller,
-        curve: Curves.fastEaseInToSlowEaseOut,
+        curve: Curves.linear,
       ),
     );
 
@@ -40,8 +42,10 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 180),
+      duration: const Duration(milliseconds: 500),
     );
+
+    _animation = Tween<double>(begin: 0.0, end: 2 * pi).animate(_controller);
 
     _animation1 = Tween<Alignment>(
       begin: Alignment.topLeft,
@@ -67,6 +71,8 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                   BorderRadius.circular(10),
                   BorderRadius.circular(15),
                   _controller.value);
+
+              print({_controller.value, _controller.value * pi, pi, 2 * pi});
 
               return Stack(
                 children: [
@@ -160,19 +166,29 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                       move(Alignment.bottomRight);
                     },
                   ),
-                  Align(
-                    alignment: _animation1.value,
-                    child: Container(
-                      color: Colors.transparent,
-                      height: containerHeightLerp,
-                      width: containerWidthLerp,
-                      alignment: Alignment.center,
-                      child: Text(
-                        'Wilsonveloper',
-                        style:
-                            TextStyle(fontSize: 20, fontWeight: textBoldLerp),
-                      ),
-                    ),
+                  AnimatedBuilder(
+                    animation: _animation,
+                    builder: (context, _) {
+                      return Transform(
+                        alignment: Alignment.center,
+                        transform: Matrix4.identity()
+                          ..rotateY(_animation.value),
+                        child: Align(
+                          alignment: _animation1.value,
+                          child: Container(
+                            color: Colors.transparent,
+                            height: containerHeightLerp,
+                            width: containerWidthLerp,
+                            alignment: Alignment.center,
+                            child: Text(
+                              'Wilsonveloper',
+                              style:
+                                  TextStyle(fontSize: 20, fontWeight: textBoldLerp),
+                            ),
+                          ),
+                        ),
+                      );
+                    }
                   ),
                 ],
               );
