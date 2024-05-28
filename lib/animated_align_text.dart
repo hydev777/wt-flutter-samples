@@ -27,6 +27,8 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
 
     currentLocation = to;
 
+    _controller.reverse();
+
     _controller
       ..reset()
       ..forward();
