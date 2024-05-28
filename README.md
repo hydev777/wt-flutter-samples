@@ -26,6 +26,11 @@ Animated text movement:
 
 ![ezgif-3-e359cd9df4](https://github.com/hydev777/wt-flutter-samples/assets/84458390/85e8575d-ab1e-458e-b5c9-e269c4949597)
 
+3D animated box
+
+![ezgif-7-b37bd1a2c2](https://github.com/hydev777/wt-flutter-samples/assets/84458390/8828ade5-e716-4588-a67a-63cd0e90c37c)
+
+
 
 
 
