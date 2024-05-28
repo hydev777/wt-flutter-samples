@@ -24,7 +24,8 @@ Animated align text:
 
 Animated text movement:
 
-![ezgif-5-786cae037b](https://github.com/hydev777/wt-flutter-samples/assets/84458390/279d7087-716f-4feb-9345-d40c4c748f77)
+![ezgif-3-e359cd9df4](https://github.com/hydev777/wt-flutter-samples/assets/84458390/85e8575d-ab1e-458e-b5c9-e269c4949597)
+
 
 
 
