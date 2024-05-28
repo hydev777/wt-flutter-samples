@@ -164,6 +164,9 @@ class _HalfCircleState extends State<HalfCircle> with TickerProviderStateMixin {
 
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Half Circle'),
+        ),
         body: AnimatedBuilder(
           animation: _counterClockwiseRotationController,
           builder: (context, child) {

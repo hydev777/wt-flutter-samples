@@ -76,7 +76,7 @@ class _ItemWidgetState extends State<ItemWidget>
     return AnimatedBuilder(
         animation: _controller,
         builder: (context, _) {
-          double value;
+          double value = 0;
           if (_controller.status == AnimationStatus.forward) {
             value = Curves.easeOut.transform(_controller.value);
           } else if (_controller.status == AnimationStatus.reverse) {
