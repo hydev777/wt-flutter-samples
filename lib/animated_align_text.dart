@@ -13,8 +13,8 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation _alignmentAnimation;
-  Alignment currentAlignmentLocation = Alignment.topLeft;
   late Animation<double> _rotationAnimation;
+  Alignment currentAlignmentLocation = Alignment.topLeft;
 
   void move(Alignment to) {
     _alignmentAnimation = Tween(
@@ -44,6 +44,8 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
       vsync: this,
       duration: const Duration(milliseconds: 500),
     );
+
+    _rotationAnimation = Tween<double>(begin: 0.0, end: 2 * pi).animate(_controller);
 
     _alignmentAnimation = Tween<Alignment>(
       begin: Alignment.topLeft,
