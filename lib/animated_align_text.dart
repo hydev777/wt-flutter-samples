@@ -12,13 +12,13 @@ class AnimatedAlignText extends StatefulWidget {
 class _AnimatedAlignTextState extends State<AnimatedAlignText>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation _animation1;
-  Alignment currentLocation = Alignment.topLeft;
-  late Animation<double> _animation;
+  late Animation _alignmentAnimation;
+  Alignment currentAlignmentLocation = Alignment.topLeft;
+  late Animation<double> _rotationAnimation;
 
   void move(Alignment to) {
-    _animation1 = Tween(
-      begin: currentLocation,
+    _alignmentAnimation = Tween(
+      begin: currentAlignmentLocation,
       end: to,
     ).animate(
       CurvedAnimation(
@@ -27,7 +27,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
       ),
     );
 
-    currentLocation = to;
+    currentAlignmentLocation = to;
 
     _controller.reverse();
 
@@ -45,9 +45,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
       duration: const Duration(milliseconds: 500),
     );
 
-    _animation = Tween<double>(begin: 0.0, end: 2 * pi).animate(_controller);
-
-    _animation1 = Tween<Alignment>(
+    _alignmentAnimation = Tween<Alignment>(
       begin: Alignment.topLeft,
       end: Alignment.bottomLeft,
     ).animate(_controller);
@@ -62,17 +60,26 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
         child: AnimatedBuilder(
             animation: _controller,
             builder: (context, _) {
-              final containerHeightLerp = lerpDouble(40, 60, _controller.value);
+              final containerHeightLerp = lerpDouble(
+                40,
+                60,
+                _controller.value,
+              );
               final textBoldLerp = FontWeight.lerp(
-                  FontWeight.normal, FontWeight.bold, _controller.value);
-              final containerWidthLerp =
-                  lerpDouble(140, 180, _controller.value);
+                FontWeight.normal,
+                FontWeight.bold,
+                _controller.value,
+              );
+              final containerWidthLerp = lerpDouble(
+                140,
+                180,
+                _controller.value,
+              );
               final containerBorderRadius = BorderRadius.lerp(
-                  BorderRadius.circular(10),
-                  BorderRadius.circular(15),
-                  _controller.value);
-
-              print({_controller.value, _controller.value * pi, pi, 2 * pi});
+                BorderRadius.circular(10),
+                BorderRadius.circular(15),
+                _controller.value,
+              );
 
               return Stack(
                 children: [
@@ -80,7 +87,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.topLeft,
                     containerHeightLerp: containerHeightLerp!,
                     containerWidthLerp: containerWidthLerp!,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius!,
                     onTap: () {
                       move(Alignment.topLeft);
@@ -90,7 +97,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.topCenter,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.topCenter);
@@ -100,7 +107,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.topRight,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.topRight);
@@ -110,7 +117,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.centerLeft,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.centerLeft);
@@ -120,7 +127,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.center,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.center);
@@ -130,7 +137,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.centerRight,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.centerRight);
@@ -140,7 +147,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.bottomLeft,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.bottomLeft);
@@ -150,7 +157,7 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.bottomCenter,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.bottomCenter);
@@ -160,36 +167,37 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
                     alignment: Alignment.bottomRight,
                     containerHeightLerp: containerHeightLerp,
                     containerWidthLerp: containerWidthLerp,
-                    currentAnimatedTextLocation: currentLocation,
+                    currentAnimatedTextLocation: currentAlignmentLocation,
                     containerBorderRadius: containerBorderRadius,
                     onTap: () {
                       move(Alignment.bottomRight);
                     },
                   ),
                   AnimatedBuilder(
-                    animation: _animation,
-                    builder: (context, _) {
-                      return Transform(
-                        alignment: Alignment.center,
-                        transform: Matrix4.identity()
-                          ..rotateY(_animation.value),
-                        child: Align(
-                          alignment: _animation1.value,
-                          child: Container(
-                            color: Colors.transparent,
-                            height: containerHeightLerp,
-                            width: containerWidthLerp,
-                            alignment: Alignment.center,
-                            child: Text(
-                              'Wilsonveloper',
-                              style:
-                                  TextStyle(fontSize: 20, fontWeight: textBoldLerp),
+                      animation: _rotationAnimation,
+                      builder: (context, _) {
+                        return Transform(
+                          alignment: Alignment.center,
+                          transform: Matrix4.identity()
+                            ..rotateY(_rotationAnimation.value),
+                          child: Align(
+                            alignment: _alignmentAnimation.value,
+                            child: Container(
+                              color: Colors.transparent,
+                              height: containerHeightLerp,
+                              width: containerWidthLerp,
+                              alignment: Alignment.center,
+                              child: Text(
+                                'Wilsonveloper',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: textBoldLerp,
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    }
-                  ),
+                        );
+                      }),
                 ],
               );
             }),
