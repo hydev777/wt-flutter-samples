@@ -24,7 +24,7 @@ Animated align text:
 
 Animated text movement:
 
-![ezgif-3-e359cd9df4](https://github.com/hydev777/wt-flutter-samples/assets/84458390/85e8575d-ab1e-458e-b5c9-e269c4949597)
+![ezgif-4-e9b934ff26](https://github.com/hydev777/wt-flutter-samples/assets/84458390/f7f7f278-0cd8-4f64-8b7e-ba3f46df88e9)
 
 3D animated box
 
