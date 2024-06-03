@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'animated_align_text.dart';
 import 'animated_arrows.dart';
 import 'animated_button_1.dart';
+import 'animated_menu.dart';
 import 'dynamic_check_mark.dart';
 import 'flipping_cards.dart';
 import 'half_circle.dart';
 import 'presentation.dart';
+import 'staggerered_menu.dart';
 import 'three_d_planes.dart';
 
 void main() {
@@ -153,6 +155,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('3D Planes'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const MenuWidget(),
+                  ),
+                );
+              },
+              child: const Text('Menu Widget'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const StaggeredMenu(),
+                  ),
+                );
+              },
+              child: const Text('Staggered Menu Widget'),
             ),
           ],
         ),
