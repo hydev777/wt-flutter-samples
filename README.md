@@ -34,8 +34,8 @@ Staggered animation:
 
 ![ezgif-5-566f2baca7](https://github.com/hydev777/wt-flutter-samples/assets/84458390/d91accc0-f00a-4fba-8c49-8865bcefa6a0)
 
+Dropdown menu
 
-
-
+![ezgif-1-82dac27a4b](https://github.com/hydev777/wt-flutter-samples/assets/84458390/9e4f8bcb-2b6f-4ca0-b35f-312795fe7268)
 
 
