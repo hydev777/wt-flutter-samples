@@ -26,13 +26,13 @@ class _AnimatedCard2State extends State<AnimatedCard2>
 
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
     );
 
     _animationController2 = AnimationController(
       vsync: this,
-      reverseDuration: Duration(milliseconds: 400),
-      duration: Duration(milliseconds: 400),
+      reverseDuration: const Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
     );
 
     _priceAlignmentAnimation = Tween(
@@ -87,9 +87,9 @@ class _AnimatedCard2State extends State<AnimatedCard2>
             return GestureDetector(
               onTap: () {},
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                   border: Border.all(
                     color: Colors.black38,
                     width: 1,
@@ -108,7 +108,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                             _animationController.reverse();
                             _animationController2.reverse();
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.close,
                             size: 16,
                           ),
@@ -135,13 +135,16 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Text('Payment Mode'),
-                                SizedBox(
+                                const Text(
+                                  'Payment Mode',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Container(
                                   height: 40,
-                                  padding: EdgeInsets.all(5),
+                                  padding: const EdgeInsets.all(5),
                                   decoration: BoxDecoration(
                                     color: Colors.black26,
                                     borderRadius: BorderRadius.circular(10),
@@ -155,20 +158,20 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                         value: true,
                                         groupValue: {},
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
-                                      Text(
+                                      const Text(
                                         '****',
                                         textAlign: TextAlign.center,
                                       ),
-                                      Text('4632'),
-                                      Spacer(),
-                                      Icon(Icons.credit_card),
+                                      const Text('4632'),
+                                      const Spacer(),
+                                      const Icon(Icons.credit_card),
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Row(
@@ -177,22 +180,25 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                     Radio(
                                       onChanged: (value) {},
                                       value: true,
-                                      groupValue: {},
+                                      groupValue: const {},
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 10,
                                     ),
-                                    Text(
+                                    const Text(
                                       '****',
                                       textAlign: TextAlign.center,
                                     ),
-                                    Text('4632'),
-                                    Spacer(),
-                                    Icon(Icons.credit_card),
+                                    const Text('4632'),
+                                    const Spacer(),
+                                    const Icon(Icons.credit_card),
                                   ],
                                 ),
-                                Text('Cash'),
-                                SizedBox(
+                                const Text(
+                                  'Cash',
+                                  style: TextStyle(color: Colors.black54),
+                                ),
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 Row(
@@ -202,13 +208,13 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                     Container(
                                       height: 40,
                                       width: 80,
-                                      padding: EdgeInsets.all(5),
+                                      padding: const EdgeInsets.all(5),
                                       decoration: BoxDecoration(
                                         color: Colors.black26,
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         '\$50',
                                         style: TextStyle(
                                             fontSize: 16,
@@ -218,13 +224,13 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                     Container(
                                       height: 40,
                                       width: 80,
-                                      padding: EdgeInsets.all(5),
+                                      padding: const EdgeInsets.all(5),
                                       decoration: BoxDecoration(
                                         color: Colors.black26,
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         '\$100',
                                         style: TextStyle(
                                             fontSize: 16,
@@ -234,13 +240,13 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                     Container(
                                       height: 40,
                                       width: 80,
-                                      padding: EdgeInsets.all(5),
+                                      padding: const EdgeInsets.all(5),
                                       decoration: BoxDecoration(
                                         color: Colors.black26,
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       alignment: Alignment.center,
-                                      child: Text(
+                                      child: const Text(
                                         '\$300',
                                         style: TextStyle(
                                             fontSize: 16,
@@ -251,14 +257,14 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                 ),
                               ],
                             )
-                          : SizedBox(),
+                          : const SizedBox(),
                     ),
                     Opacity(
                       opacity: _opacityAnimation.evaluate(_animationController),
                       child: _animationController.status ==
                               AnimationStatus.completed
-                          ? Center(
-                              child: Container(
+                          ? const Center(
+                              child: SizedBox(
                                 height: 150,
                                 child: Column(
                                   crossAxisAlignment:
@@ -267,7 +273,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                 ),
                               ),
                             )
-                          : SizedBox(),
+                          : const SizedBox(),
                     ),
                     AnimatedBuilder(
                         animation: _animationController2,
@@ -281,12 +287,12 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                               child: SizedBox(
                                 height: 40,
                                 child: FilledButton.icon(
-                                  icon: Icon(Icons.add),
+                                  icon: const Icon(Icons.add),
                                   onPressed: () {
                                     _animationController.forward();
                                     _animationController2.forward();
                                   },
-                                  label: Text('Add Cash'),
+                                  label: const Text('Add Cash'),
                                 ),
                               ),
                             ),
