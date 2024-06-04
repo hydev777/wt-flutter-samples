@@ -137,7 +137,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                               children: [
                                 const Text(
                                   'Payment Mode',
-                                  style: TextStyle(color: Colors.black54),
+                                  style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w600),
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -196,7 +196,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                 ),
                                 const Text(
                                   'Cash',
-                                  style: TextStyle(color: Colors.black54),
+                                  style: TextStyle(color: Colors.black54, fontWeight: FontWeight.w600),
                                 ),
                                 const SizedBox(
                                   height: 10,
