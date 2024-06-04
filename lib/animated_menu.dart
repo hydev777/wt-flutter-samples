@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MenuWidget extends StatefulWidget {
-  const MenuWidget({super.key});
+class DropDownMenuWidget extends StatefulWidget {
+  const DropDownMenuWidget({super.key});
 
   @override
-  State<MenuWidget> createState() => _MenuWidgetState();
+  State<DropDownMenuWidget> createState() => _DropDownMenuWidgetState();
 }
 
-class _MenuWidgetState extends State<MenuWidget> {
+class _DropDownMenuWidgetState extends State<DropDownMenuWidget> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -28,37 +28,37 @@ class _MenuWidgetState extends State<MenuWidget> {
               ),
             ),
           ),
-          Container(
-            height: 100,
-            color: Colors.green,
-            padding: const EdgeInsets.only(left: 20),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'FOOD & DRINK',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.yellow[700],
-              ),
-            ),
-          ),
-          Container(
-            height: 100,
-            color: Colors.pink[100],
-            padding: const EdgeInsets.only(left: 20),
-            alignment: Alignment.centerLeft,
-            child: const Text(
-              'BEAUTY',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.pink,
-              ),
-            ),
+          AnimatedCategory(
+            options: const [
+              'Best Ingredients',
+              'Recipes',
+              'Spicy',
+              'Meat',
+              'Sweet',
+            ],
+            tittle: 'FOOD & DRINK',
+            backgroundColor: Colors.green,
+            titleColor: Colors.yellow[700]!,
           ),
           AnimatedCategory(
             options: const [
-              'TEST',
+              'Make Up',
+              'Stylish',
+              'Faces',
+              'Dressess'
+            ],
+            tittle: 'BEAUTY',
+            backgroundColor: Colors.pink[100]!,
+            titleColor: Colors.pink,
+          ),
+          AnimatedCategory(
+            options: const [
+              'Baby Shower',
+              'Toys',
+              'Games',
+              'Early Learning',
+              'Baby food',
+              'Clothes',
             ],
             tittle: 'BABY & KIDS',
             backgroundColor: Colors.blue[900]!,
@@ -66,13 +66,12 @@ class _MenuWidgetState extends State<MenuWidget> {
           ),
           AnimatedCategory(
             options: const [
-              'TEST',
-              'TEST',
-              'TEST',
-              'TEST',
-              'TEST',
-              'TEST',
-              'TEST'
+              'Furnaces',
+              'Couch',
+              'Designs',
+              'Colors',
+              'Combinations',
+              'Internals',
             ],
             tittle: 'HOMEWARES',
             backgroundColor: Colors.yellow[700]!,
@@ -106,10 +105,11 @@ class _AnimatedCategoryState extends State<AnimatedCategory>
     with SingleTickerProviderStateMixin {
   bool expand = false;
   late final AnimationController _controller;
+  late final Animation<double> curve;
   late final Tween<double> _topPadding;
   late final Tween<double> _height;
   late final Tween<double> _titleTopPositioned;
-  late final Tween<double> _optionsTopPositioned;
+  late final Tween<double> _opacity;
   int totalItemHeight = 0;
   int maxContainerHeight = 0;
 
@@ -126,16 +126,17 @@ class _AnimatedCategoryState extends State<AnimatedCategory>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 600),
     );
 
-    print(maxContainerHeight);
+    curve = CurvedAnimation(parent: _controller, curve: Curves.bounceOut);
+
+    _opacity = Tween(begin: 0, end: 1)..animate(_controller);
 
     _height = Tween(begin: 100, end: maxContainerHeight.toDouble())
-      ..animate(_controller);
+      ..animate(curve);
     _topPadding = Tween(begin: 0, end: 20)..animate(_controller);
     _titleTopPositioned = Tween(begin: 30, end: 0);
-    _optionsTopPositioned = Tween(begin: 30, end: 35);
   }
 
   @override
@@ -154,7 +155,7 @@ class _AnimatedCategoryState extends State<AnimatedCategory>
           animation: _controller,
           builder: (context, _) {
             return Container(
-              height: _height.evaluate(_controller),
+              height: _height.evaluate(curve),
               color: widget.backgroundColor,
               padding: EdgeInsets.only(
                 left: 20,
@@ -173,24 +174,25 @@ class _AnimatedCategoryState extends State<AnimatedCategory>
                       ),
                     ),
                   ),
-                  _controller.isCompleted
-                      ? Positioned(
-                          top: _optionsTopPositioned.evaluate(_controller),
-                          child: Column(
-                            children: widget.options
-                                .map(
-                                  (option) => Text(
-                                    option,
-                                    style: TextStyle(
-                                      color: widget.titleColor,
-                                      fontWeight: FontWeight.w200,
-                                    ),
-                                  ),
-                                )
-                                .toList(),
-                          ),
-                        )
-                      : const SizedBox.shrink(),
+                  Positioned(
+                    top: 35,
+                    child: Opacity(
+                      opacity: _opacity.evaluate(_controller),
+                      child: Column(
+                        children: widget.options
+                            .map(
+                              (option) => Text(
+                                option,
+                                style: TextStyle(
+                                  color: widget.titleColor,
+                                  fontWeight: FontWeight.w200,
+                                ),
+                              ),
+                            )
+                            .toList(),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             );
