@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'animated_align_text.dart';
 import 'animated_arrows.dart';
 import 'animated_button_1.dart';
+import 'animated_card_2.dart';
 import 'animated_menu.dart';
 import 'dynamic_check_mark.dart';
 import 'flipping_cards.dart';
@@ -182,6 +183,19 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Staggered Menu Widget'),
             ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const AnimatedCard2(),
+                  ),
+                );
+              },
+              child: const Text('Desplegable Card'),
+            )
           ],
         ),
       ),
