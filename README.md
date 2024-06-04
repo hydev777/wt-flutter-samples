@@ -1,6 +1,6 @@
 # Animations examples
 
-This is a series of animations demostrations and experimentation.
+This is a series of animations demostrations and experimentation using explicit animations.
 
 Flipping cards:
 
