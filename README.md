@@ -30,6 +30,11 @@ Animated text movement:
 
 ![ezgif-7-b37bd1a2c2](https://github.com/hydev777/wt-flutter-samples/assets/84458390/8828ade5-e716-4588-a67a-63cd0e90c37c)
 
+Staggered animation:
+
+![ezgif-5-566f2baca7](https://github.com/hydev777/wt-flutter-samples/assets/84458390/d91accc0-f00a-4fba-8c49-8865bcefa6a0)
+
+
 
 
 
