@@ -14,19 +14,16 @@ class _DropDownMenuWidgetState extends State<DropDownMenuWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Container(
-            height: 100,
-            color: Colors.blue[200],
-            padding: const EdgeInsets.only(left: 20),
-            alignment: Alignment.centerLeft,
-            child: Text(
-              'HEALTHCARE',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue[900],
-              ),
-            ),
+          AnimatedCategory(
+            options: const [
+              'Health',
+              'Practices',
+              'Drugs',
+              'Medicine',
+            ],
+            tittle: 'HEALTHCARE',
+            backgroundColor: Colors.blue[200]!,
+            titleColor: Colors.blue[900]!,
           ),
           AnimatedCategory(
             options: const [
