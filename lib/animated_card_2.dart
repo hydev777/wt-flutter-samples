@@ -10,6 +10,7 @@ class AnimatedCard2 extends StatefulWidget {
 
 class _AnimatedCard2State extends State<AnimatedCard2>
     with TickerProviderStateMixin {
+  Alignment priceAlignment = Alignment.centerLeft;
   late final AnimationController _animationController;
   late final AnimationController _animationController2;
   late final Animation<Alignment> _alignmentAnimation;
@@ -358,14 +359,17 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                           const SizedBox(
                             height: 10,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              ..._prices.map(
-                                (price) {
-                                  return GestureDetector(
+                          SizedBox(
+                            height: 50,
+                            child: Stack(
+                              children: [
+                                Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: GestureDetector(
                                     onTap: () {
-                                      selectPrice(price['id']);
+                                      setState(() {
+                                        priceAlignment = Alignment.centerLeft;
+                                      });
                                     },
                                     child: AnimatedContainer(
                                       duration:
@@ -376,27 +380,95 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                       decoration: BoxDecoration(
                                         color: const Color(0xFFF6F5FA),
                                         borderRadius: BorderRadius.circular(10),
-                                        border: price['selected']
-                                            ? Border.all(
-                                                color: Colors.black,
-                                                width: 2,
-                                              )
-                                            : Border.all(
-                                                color: Colors.transparent,
-                                              ),
                                       ),
                                       alignment: Alignment.center,
                                       child: Text(
-                                        '\$${price['price']}',
+                                        '\$${_prices[0]['price']}',
                                         style: const TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold),
                                       ),
                                     ),
-                                  );
-                                },
-                              ),
-                            ],
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.center,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        priceAlignment = Alignment.center;
+                                      });
+                                    },
+                                    child: AnimatedContainer(
+                                      duration:
+                                          const Duration(milliseconds: 180),
+                                      height: 40,
+                                      width: 80,
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFF6F5FA),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        '\$${_prices[1]['price']}',
+                                        style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.centerRight,
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      setState(() {
+                                        priceAlignment = Alignment.centerRight;
+                                      });
+                                    },
+                                    child: AnimatedContainer(
+                                      duration:
+                                          const Duration(milliseconds: 180),
+                                      height: 40,
+                                      width: 80,
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFF6F5FA),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        '\$${_prices[2]['price']}',
+                                        style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                AnimatedAlign(
+                                  duration: const Duration(milliseconds: 180),
+                                  alignment: priceAlignment,
+                                  child: AnimatedContainer(
+                                    duration: const Duration(milliseconds: 180),
+                                    curve: Curves.bounceIn,
+                                    height: 40,
+                                    width: 80,
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(14),
+                                      border: Border.all(
+                                        color: Colors.black,
+                                        width: 2,
+                                      ),
+                                    ),
+                                    alignment: Alignment.center,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
