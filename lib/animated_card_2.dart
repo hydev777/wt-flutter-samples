@@ -97,7 +97,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     );
 
     _heightAnimation = Tween<double>(
-      begin: 65,
+      begin: 70,
       end: 340,
     ).animate(
       CurvedAnimation(
@@ -209,14 +209,23 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                       opacity: _opacityAnimation.value,
                       child: Align(
                         alignment: Alignment.topRight,
-                        child: IconButton(
-                          onPressed: () {
+                        child: GestureDetector(
+                          onTap: () {
                             _animationController.reverse();
                             _animationController2.reverse();
                           },
-                          icon: const Icon(
-                            Icons.close,
-                            size: 16,
+                          child: Container(
+                            height: 25,
+                            width: 25,
+                            decoration: const BoxDecoration(
+                              color: Color(0xFFF1F0F5),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              color: Color(0xFFAFAFB3),
+                              Icons.close,
+                              size: 16,
+                            ),
                           ),
                         ),
                       ),
@@ -264,7 +273,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                   top: 25,
                                   child: Container(
                                     height: 40,
-                                    width: 250,
+                                    width: 270,
                                     padding: const EdgeInsets.only(right: 10),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFFF6F5FA),
@@ -291,7 +300,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                           width: 10,
                                         ),
                                         const Text(
-                                          '****',
+                                          '**** ',
                                           textAlign: TextAlign.center,
                                         ),
                                         const Text('6756'),
@@ -305,7 +314,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                   top: 70,
                                   child: Container(
                                     height: 40,
-                                    width: 250,
+                                    width: 270,
                                     padding: const EdgeInsets.only(right: 10),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFFF6F5FA),
@@ -332,7 +341,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                           width: 10,
                                         ),
                                         const Text(
-                                          '****',
+                                          '**** ',
                                           textAlign: TextAlign.center,
                                         ),
                                         const Text('4632'),
@@ -347,7 +356,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                   top: _topPositioned,
                                   child: Container(
                                     height: 40,
-                                    width: 250,
+                                    width: 270,
                                     padding: const EdgeInsets.all(5),
                                     decoration: BoxDecoration(
                                       color: Colors.transparent,
