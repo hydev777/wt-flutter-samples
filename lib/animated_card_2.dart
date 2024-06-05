@@ -97,7 +97,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     );
 
     _heightAnimation = Tween<double>(
-      begin: 70,
+      begin: 62,
       end: 340,
     ).animate(
       CurvedAnimation(
@@ -166,7 +166,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
       ),
     );
 
-    _rotationAnimation = Tween<double>(begin: 0, end: -4).animate(
+    _rotationAnimation = Tween<double>(begin: 0, end: -5).animate(
       CurvedAnimation(
         parent: _animationController2,
         reverseCurve: Curves.easeInBack,
