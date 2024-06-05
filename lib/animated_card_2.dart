@@ -75,7 +75,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
         curve: const Interval(
           0,
           0.300,
-          curve: Curves.ease,
+          curve: Curves.easeInBack,
         ),
       ),
     );
@@ -227,9 +227,10 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                           const Text(
                             'Wallet',
                             style: TextStyle(
-                                fontSize: 10,
-                                color: Colors.black54,
-                                fontWeight: FontWeight.w600),
+                              fontSize: 10,
+                              color: Colors.black54,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                           Text(
                             '\$34.00',
