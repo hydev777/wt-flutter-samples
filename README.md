@@ -38,4 +38,9 @@ Dropdown menu
 
 ![ezgif-1-82dac27a4b](https://github.com/hydev777/wt-flutter-samples/assets/84458390/9e4f8bcb-2b6f-4ca0-b35f-312795fe7268)
 
+Animated card 2
+
+![ezgif-5-048793295a](https://github.com/hydev777/wt-flutter-samples/assets/84458390/bc6f53cc-855a-434c-b030-67fdf2c161e9)
+
+
 
