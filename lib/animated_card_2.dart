@@ -23,6 +23,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
   late Animation<double> _rotationAnimation;
 
   String _card = "6756";
+  double _topPositioned = 25;
 
   final List<Map<String, dynamic>> _prices = [
     {
@@ -249,106 +250,117 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          const Text(
-                            'Payment Mode',
-                            style: TextStyle(
-                                color: Colors.black54,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 180),
-                            height: 40,
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFF6F5FA),
-                              borderRadius: BorderRadius.circular(10),
-                              border: _card == "6756"
-                                  ? Border.all(
-                                      color: Colors.black,
-                                      width: 2,
-                                    )
-                                  : Border.all(
-                                      color: Colors.transparent,
-                                    ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                          SizedBox(
+                            height: 115,
+                            child: Stack(
                               children: [
-                                Radio(
-                                  fillColor: const WidgetStatePropertyAll(
-                                      Colors.black),
-                                  onChanged: (String? value) {
-                                    setState(() {
-                                      _card = value!;
-                                    });
-                                  },
-                                  value: "6756",
-                                  groupValue: _card,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
                                 const Text(
-                                  '****',
-                                  textAlign: TextAlign.center,
+                                  'Payment Mode',
+                                  style: TextStyle(
+                                      color: Colors.black54,
+                                      fontWeight: FontWeight.w600),
                                 ),
-                                const Text('6756'),
-                                const Spacer(),
-                                const Icon(Icons.credit_card),
+                                Positioned(
+                                  top: 25,
+                                  child: Container(
+                                    height: 40,
+                                    width: 250,
+                                    padding: const EdgeInsets.only(right: 10),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFF6F5FA),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Radio(
+                                          fillColor:
+                                              const WidgetStatePropertyAll(
+                                                  Colors.black),
+                                          onChanged: (String? value) {
+                                            setState(() {
+                                              _card = value!;
+                                              _topPositioned = 25;
+                                            });
+                                          },
+                                          value: "6756",
+                                          groupValue: _card,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        const Text(
+                                          '****',
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        const Text('6756'),
+                                        const Spacer(),
+                                        const Icon(Icons.credit_card),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 70,
+                                  child: Container(
+                                    height: 40,
+                                    width: 250,
+                                    padding: const EdgeInsets.only(right: 10),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFF6F5FA),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Radio(
+                                          fillColor:
+                                              const WidgetStatePropertyAll(
+                                                  Colors.black),
+                                          onChanged: (String? value) {
+                                            setState(() {
+                                              _card = value!;
+                                              _topPositioned = 70;
+                                            });
+                                          },
+                                          value: "4632",
+                                          groupValue: _card,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        const Text(
+                                          '****',
+                                          textAlign: TextAlign.center,
+                                        ),
+                                        const Text('4632'),
+                                        const Spacer(),
+                                        const Icon(Icons.credit_card),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                AnimatedPositioned(
+                                  duration: const Duration(milliseconds: 180),
+                                  top: _topPositioned,
+                                  child: Container(
+                                    height: 40,
+                                    width: 250,
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                        color: Colors.black,
+                                        width: 2,
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          AnimatedContainer(
-                            duration: const Duration(milliseconds: 180),
-                            height: 40,
-                            padding: const EdgeInsets.all(5),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFF6F5FA),
-                              borderRadius: BorderRadius.circular(10),
-                              border: _card == "4632"
-                                  ? Border.all(
-                                      color: Colors.black,
-                                      width: 2,
-                                    )
-                                  : Border.all(
-                                      color: Colors.transparent,
-                                    ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Radio(
-                                  fillColor: const WidgetStatePropertyAll(
-                                      Colors.black),
-                                  onChanged: (String? value) {
-                                    setState(() {
-                                      _card = value!;
-                                    });
-                                  },
-                                  value: "4632",
-                                  groupValue: _card,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                const Text(
-                                  '****',
-                                  textAlign: TextAlign.center,
-                                ),
-                                const Text('4632'),
-                                const Spacer(),
-                                const Icon(Icons.credit_card),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
                           ),
                           const Text(
                             'Cash',
@@ -452,13 +464,13 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                   alignment: priceAlignment,
                                   child: AnimatedContainer(
                                     duration: const Duration(milliseconds: 180),
-                                    curve: Curves.bounceIn,
+                                    curve: Curves.bounceOut,
                                     height: 40,
                                     width: 80,
                                     padding: const EdgeInsets.all(5),
                                     decoration: BoxDecoration(
                                       color: Colors.transparent,
-                                      borderRadius: BorderRadius.circular(14),
+                                      borderRadius: BorderRadius.circular(12),
                                       border: Border.all(
                                         color: Colors.black,
                                         width: 2,
