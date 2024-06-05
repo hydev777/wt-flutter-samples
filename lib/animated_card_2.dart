@@ -159,7 +159,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
         curve: const Interval(
           0.300,
           0.500,
-          curve: Curves.ease,
+          curve: Curves.bounceIn,
         ),
       ),
     );
@@ -167,6 +167,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     _rotationAnimation = Tween<double>(begin: 0, end: -4).animate(
       CurvedAnimation(
         parent: _animationController2,
+        reverseCurve: Curves.easeInBack,
         curve: Curves.easeInBack,
       ),
     );
@@ -275,6 +276,8 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Radio(
+                                  fillColor: const WidgetStatePropertyAll(
+                                      Colors.black),
                                   onChanged: (String? value) {
                                     setState(() {
                                       _card = value!;
@@ -319,6 +322,8 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Radio(
+                                  fillColor: const WidgetStatePropertyAll(
+                                      Colors.black),
                                   onChanged: (String? value) {
                                     setState(() {
                                       _card = value!;
@@ -390,54 +395,6 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                   );
                                 },
                               ),
-                              // Container(
-                              //   height: 40,
-                              //   width: 80,
-                              //   padding: const EdgeInsets.all(5),
-                              //   decoration: BoxDecoration(
-                              //     color: Colors.black26,
-                              //     borderRadius: BorderRadius.circular(10),
-                              //   ),
-                              //   alignment: Alignment.center,
-                              //   child: const Text(
-                              //     '\$50',
-                              //     style: TextStyle(
-                              //         fontSize: 16,
-                              //         fontWeight: FontWeight.bold),
-                              //   ),
-                              // ),
-                              // Container(
-                              //   height: 40,
-                              //   width: 80,
-                              //   padding: const EdgeInsets.all(5),
-                              //   decoration: BoxDecoration(
-                              //     color: Colors.black26,
-                              //     borderRadius: BorderRadius.circular(10),
-                              //   ),
-                              //   alignment: Alignment.center,
-                              //   child: const Text(
-                              //     '\$100',
-                              //     style: TextStyle(
-                              //         fontSize: 16,
-                              //         fontWeight: FontWeight.bold),
-                              //   ),
-                              // ),
-                              // Container(
-                              //   height: 40,
-                              //   width: 80,
-                              //   padding: const EdgeInsets.all(5),
-                              //   decoration: BoxDecoration(
-                              //     color: Colors.black26,
-                              //     borderRadius: BorderRadius.circular(10),
-                              //   ),
-                              //   alignment: Alignment.center,
-                              //   child: const Text(
-                              //     '\$300',
-                              //     style: TextStyle(
-                              //         fontSize: 16,
-                              //         fontWeight: FontWeight.bold),
-                              //   ),
-                              // ),
                             ],
                           ),
                         ],
@@ -455,6 +412,9 @@ class _AnimatedCard2State extends State<AnimatedCard2>
                                 height: 40,
                                 child: FilledButton.icon(
                                   icon: const Icon(Icons.add),
+                                  style: const ButtonStyle(
+                                      backgroundColor:
+                                          WidgetStatePropertyAll(Colors.black)),
                                   onPressed: () {
                                     _animationController.forward();
                                     _animationController2.forward();
