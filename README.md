@@ -40,7 +40,8 @@ Dropdown menu
 
 Animated card 2
 
-![ezgif-5-048793295a](https://github.com/hydev777/wt-flutter-samples/assets/84458390/bc6f53cc-855a-434c-b030-67fdf2c161e9)
+![ezgif-3-4c2b892e4f](https://github.com/hydev777/wt-flutter-samples/assets/84458390/4dc161bc-ab3e-45df-9abe-2acc4d561380)
+
 
 
 
