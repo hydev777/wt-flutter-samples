@@ -42,6 +42,11 @@ Animated card 2
 
 ![ezgif-3-4c2b892e4f](https://github.com/hydev777/wt-flutter-samples/assets/84458390/4dc161bc-ab3e-45df-9abe-2acc4d561380)
 
+Animated card 3
+
+![ezgif-3-e44b7649ca](https://github.com/hydev777/wt-flutter-samples/assets/84458390/2bd5bd65-2180-4ca4-8751-3dd95aa6c3af)
+
+
 
 
 
