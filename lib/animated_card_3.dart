@@ -328,105 +328,32 @@ class _AnimatedCard3State extends State<AnimatedCard3>
                                 ),
                               ),
                             ),
-                            Positioned(
-                              top: 10,
+                            Profile(
+                              imageUrl:
+                                  'https://static1.srcdn.com/wordpress/wp-content/uploads/2023/10/toji-smiles-in-jujutsu-kaisen.jpg',
                               left: item4PositionLeft.value,
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: 50,
-                                    width: 50,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.deepPurple,
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image: NetworkImage(
-                                            'https://static1.srcdn.com/wordpress/wp-content/uploads/2023/10/toji-smiles-in-jujutsu-kaisen.jpg'),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                  Name(
-                                    label: 'Toji',
-                                    opacity: _opacityAnimation.value,
-                                  ),
-                                ],
-                              ),
+                              name: 'Toji',
+                              nameOpacity: _opacityAnimation.value,
                             ),
-                            Positioned(
-                              top: 10,
+                            Profile(
+                              imageUrl: 'https://i.redd.it/qq9g56ab20161.jpg',
                               left: item3PositionLeft.value,
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: 50,
-                                    width: 50,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.blue,
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image: NetworkImage(
-                                            'https://i.redd.it/qq9g56ab20161.jpg'),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                  Name(
-                                    label: 'Megumi',
-                                    opacity: _opacityAnimation.value,
-                                  ),
-                                ],
-                              ),
+                              name: 'Megumi',
+                              nameOpacity: _opacityAnimation.value,
                             ),
-                            Positioned(
-                              top: 10,
+                            Profile(
+                              imageUrl:
+                                  'https://miro.medium.com/v2/resize:fit:780/1*MKOcLJliGhE6ifa34SRZVw.jpeg',
                               left: item2PositionLeft.value,
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: 50,
-                                    width: 50,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.black,
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image: NetworkImage(
-                                            'https://miro.medium.com/v2/resize:fit:780/1*MKOcLJliGhE6ifa34SRZVw.jpeg'),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                  Name(
-                                    label: 'Itadori',
-                                    opacity: _opacityAnimation.value,
-                                  ),
-                                ],
-                              ),
+                              name: 'Itadori',
+                              nameOpacity: _opacityAnimation.value,
                             ),
-                            Positioned(
-                              top: 10,
+                            Profile(
+                              imageUrl:
+                                  'https://miro.medium.com/v2/resize:fit:1400/0*ax6zaHxB7V-VpF7u.jpeg',
                               left: item1PositionLeft.value,
-                              child: Column(
-                                children: [
-                                  Container(
-                                    height: 50,
-                                    width: 50,
-                                    decoration: const BoxDecoration(
-                                      color: Colors.amber,
-                                      shape: BoxShape.circle,
-                                      image: DecorationImage(
-                                        image: NetworkImage(
-                                            'https://miro.medium.com/v2/resize:fit:1400/0*ax6zaHxB7V-VpF7u.jpeg'),
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                  Name(
-                                    label: 'Sukuna',
-                                    opacity: _opacityAnimation.value,
-                                  ),
-                                ],
-                              ),
+                              name: 'Sukuna',
+                              nameOpacity: _opacityAnimation.value,
                             ),
                           ],
                         ),
@@ -441,80 +368,26 @@ class _AnimatedCard3State extends State<AnimatedCard3>
                           width: 300,
                           child: Stack(
                             children: [
-                              Positioned(
-                                top: 10,
+                              Profile(
+                                imageUrl:
+                                    'https://hips.hearstapps.com/hmg-prod/images/jujutsu-kaisen-0-images-1647000118.jpg?crop=0.544xw:0.973xh;0.226xw,0&resize=768:*',
                                 left: 160,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: const BoxDecoration(
-                                        color: Colors.blue,
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: NetworkImage(
-                                              'https://hips.hearstapps.com/hmg-prod/images/jujutsu-kaisen-0-images-1647000118.jpg?crop=0.544xw:0.973xh;0.226xw,0&resize=768:*'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                    Name(
-                                      label: 'Yuta',
-                                      opacity: _opacityAnimation.value,
-                                    ),
-                                  ],
-                                ),
+                                name: 'Yuta',
+                                nameOpacity: _opacityAnimation.value,
                               ),
-                              Positioned(
-                                top: 10,
+                              Profile(
+                                imageUrl:
+                                    'https://miro.medium.com/v2/resize:fit:736/1*GHQ2nQfaZyF81STYtlmAyA.jpeg',
                                 left: 90,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: const BoxDecoration(
-                                        color: Colors.black,
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: NetworkImage(
-                                              'https://miro.medium.com/v2/resize:fit:736/1*GHQ2nQfaZyF81STYtlmAyA.jpeg'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                    Name(
-                                      label: 'Geto',
-                                      opacity: _opacityAnimation.value,
-                                    ),
-                                  ],
-                                ),
+                                name: 'Geto',
+                                nameOpacity: _opacityAnimation.value,
                               ),
-                              Positioned(
-                                top: 10,
+                              Profile(
+                                imageUrl:
+                                    'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5c0ed54b-a511-4a68-be86-2ebbb1bfe82e/dghetyf-0ff4c70e-c366-4abb-a133-faf0bb5ef6dd.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVjMGVkNTRiLWE1MTEtNGE2OC1iZTg2LTJlYmJiMWJmZTgyZVwvZGdoZXR5Zi0wZmY0YzcwZS1jMzY2LTRhYmItYTEzMy1mYWYwYmI1ZWY2ZGQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eMltyrMFKM68bUlmCBoZ5fOW3iyJ93OoQL5eD1VZ8OM',
                                 left: 20,
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: 50,
-                                      width: 50,
-                                      decoration: const BoxDecoration(
-                                        color: Colors.amber,
-                                        shape: BoxShape.circle,
-                                        image: DecorationImage(
-                                          image: NetworkImage(
-                                              'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5c0ed54b-a511-4a68-be86-2ebbb1bfe82e/dghetyf-0ff4c70e-c366-4abb-a133-faf0bb5ef6dd.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzVjMGVkNTRiLWE1MTEtNGE2OC1iZTg2LTJlYmJiMWJmZTgyZVwvZGdoZXR5Zi0wZmY0YzcwZS1jMzY2LTRhYmItYTEzMy1mYWYwYmI1ZWY2ZGQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eMltyrMFKM68bUlmCBoZ5fOW3iyJ93OoQL5eD1VZ8OM'),
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                    Name(
-                                      label: 'Nanami',
-                                      opacity: _opacityAnimation.value,
-                                    ),
-                                  ],
-                                ),
+                                name: 'Nanami',
+                                nameOpacity: _opacityAnimation.value,
                               ),
                             ],
                           ),
@@ -569,6 +442,48 @@ class _AnimatedCard3State extends State<AnimatedCard3>
             );
           },
         ),
+      ),
+    );
+  }
+}
+
+class Profile extends StatelessWidget {
+  const Profile({
+    super.key,
+    required this.imageUrl,
+    required this.left,
+    required this.name,
+    required this.nameOpacity,
+  });
+
+  final String imageUrl;
+  final double left;
+  final String name;
+  final double nameOpacity;
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      top: 10,
+      left: left,
+      child: Column(
+        children: [
+          Container(
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: NetworkImage(imageUrl),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Name(
+            label: name,
+            opacity: nameOpacity,
+          ),
+        ],
       ),
     );
   }
