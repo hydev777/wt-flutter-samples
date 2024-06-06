@@ -58,7 +58,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
 
     _animationController = AnimationController(
       vsync: this,
-      reverseDuration: const Duration(milliseconds: 600),
+      reverseDuration: const Duration(milliseconds: 500),
       duration: const Duration(seconds: 1),
     );
 
@@ -74,6 +74,11 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
+        reverseCurve: const Interval(
+          0,
+          0.300,
+          curve: Curves.ease,
+        ),
         curve: const Interval(
           0,
           0.300,
@@ -88,6 +93,11 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
+        reverseCurve: const Interval(
+          0,
+          0.300,
+          curve: Curves.ease,
+        ),
         curve: const Interval(
           0,
           0.300,
@@ -102,6 +112,11 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
+        reverseCurve: const Interval(
+          0,
+          0.300,
+          curve: Curves.ease,
+        ),
         curve: const Interval(
           0,
           0.300,
@@ -116,6 +131,11 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
+        reverseCurve: const Interval(
+          0,
+          0.300,
+          curve: Curves.ease,
+        ),
         curve: const Interval(
           0,
           0.300,
@@ -130,6 +150,11 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
+        reverseCurve: const Interval(
+          0,
+          0.300,
+          curve: Curves.ease,
+        ),
         curve: const Interval(
           0,
           0.300,
@@ -144,6 +169,11 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
+        reverseCurve: const Interval(
+          0,
+          0.300,
+          curve: Curves.ease,
+        ),
         curve: const Interval(
           0,
           0.300,
@@ -158,6 +188,11 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
+        reverseCurve: const Interval(
+          0.450,
+          0.500,
+          curve: Curves.bounceOut,
+        ),
         curve: const Interval(
           0.300,
           0.500,
@@ -166,7 +201,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
       ),
     );
 
-    _rotationAnimation = Tween<double>(begin: 0, end: -5).animate(
+    _rotationAnimation = Tween<double>(begin: 0, end: -2).animate(
       CurvedAnimation(
         parent: _animationController2,
         reverseCurve: Curves.easeInBack,
