@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math' show pi;
 
 class AnimatedCard3 extends StatefulWidget {
   const AnimatedCard3({super.key});
