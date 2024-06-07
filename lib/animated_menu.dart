@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DropDownMenuWidget extends StatefulWidget {
-  const DropDownMenuWidget({super.key});
+class AnimatedDropDownMenu extends StatefulWidget {
+  const AnimatedDropDownMenu({super.key});
 
   @override
-  State<DropDownMenuWidget> createState() => _DropDownMenuWidgetState();
+  State<AnimatedDropDownMenu> createState() => _AnimatedDropDownMenuState();
 }
 
-class _DropDownMenuWidgetState extends State<DropDownMenuWidget> {
+class _AnimatedDropDownMenuState extends State<AnimatedDropDownMenu> {
   @override
   Widget build(BuildContext context) {
     return Material(

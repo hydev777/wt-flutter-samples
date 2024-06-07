@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'animated_align_text.dart';
-import 'animated_arrows.dart';
+import 'animated_align_example_1.dart';
 import 'animated_button_1.dart';
 import 'animated_card_2.dart';
 import 'animated_card_3.dart';
@@ -165,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const DropDownMenuWidget(),
+                    builder: (BuildContext context) => const AnimatedDropDownMenu(),
                   ),
                 );
               },
