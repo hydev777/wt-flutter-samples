@@ -123,7 +123,7 @@ class _AnimatedCategoryState extends State<AnimatedCategory>
 
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
+      duration: const Duration(milliseconds: 300),
     );
 
     curve = CurvedAnimation(parent: _controller, curve: Curves.bounceOut);
@@ -176,6 +176,7 @@ class _AnimatedCategoryState extends State<AnimatedCategory>
                     child: Opacity(
                       opacity: _opacity.evaluate(_controller),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: widget.options
                             .map(
                               (option) => Text(
