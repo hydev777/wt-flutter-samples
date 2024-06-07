@@ -311,7 +311,7 @@ class _AnimatedCard3State extends State<AnimatedCard3>
                                   child: Row(
                                     children: [
                                       Text(
-                                        '+3',
+                                        '+4',
                                         style: TextStyle(
                                           fontSize: 18,
                                           color: Colors.black54,
