@@ -369,6 +369,13 @@ class _AnimatedCard3State extends State<AnimatedCard3>
                             children: [
                               Profile(
                                 imageUrl:
+                                    'https://www.mundodeportivo.com/alfabeta/hero/2023/10/satoru-gojo-se-ha-convertido-en-uno-de-los-personajes-mas-complejos-del-anime.jpg?width=1200',
+                                left: 230,
+                                name: 'Gojo',
+                                nameOpacity: _opacityAnimation.value,
+                              ),
+                              Profile(
+                                imageUrl:
                                     'https://hips.hearstapps.com/hmg-prod/images/jujutsu-kaisen-0-images-1647000118.jpg?crop=0.544xw:0.973xh;0.226xw,0&resize=768:*',
                                 left: 160,
                                 name: 'Yuta',
@@ -471,12 +478,15 @@ class Profile extends StatelessWidget {
             height: 50,
             width: 50,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: NetworkImage(imageUrl),
-                fit: BoxFit.cover,
-              ),
-            ),
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: NetworkImage(imageUrl),
+                  fit: BoxFit.cover,
+                ),
+                border: Border.all(
+                  color: const Color(0xFFFEFEFE),
+                  width: 2,
+                )),
           ),
           Name(
             label: name,
