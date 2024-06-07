@@ -145,7 +145,7 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     );
 
     _fontSizeAnimation = Tween<double>(
-      begin: 18,
+      begin: 16,
       end: 14,
     ).animate(
       CurvedAnimation(
