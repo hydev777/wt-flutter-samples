@@ -36,7 +36,7 @@ This is a series of animations demostrations and experimentation using explicit 
 
 [Dropdown menu](https://github.com/hydev777/wt-flutter-samples/blob/main/lib/animated_menu.dart)
 
-![ezgif-1-82dac27a4b](https://github.com/hydev777/wt-flutter-samples/assets/84458390/9e4f8bcb-2b6f-4ca0-b35f-312795fe7268)
+![ezgif-1-3908513b76](https://github.com/hydev777/wt-flutter-samples/assets/84458390/437f9e48-1dd3-46fb-9dca-3a9a84baeba2)
 
 [Animated card 2](https://github.com/hydev777/wt-flutter-samples/blob/main/lib/animated_card_2.dart)
 
