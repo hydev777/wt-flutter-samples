@@ -44,7 +44,9 @@ Animated card 2
 
 Animated card 3
 
-![ezgif-3-e44b7649ca](https://github.com/hydev777/wt-flutter-samples/assets/84458390/2bd5bd65-2180-4ca4-8751-3dd95aa6c3af)
+![ezgif-1-ca4db839be](https://github.com/hydev777/wt-flutter-samples/assets/84458390/8c70a286-2404-4f78-bee4-20616963fb95)
+
+
 
 
 
