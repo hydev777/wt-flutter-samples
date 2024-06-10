@@ -11,6 +11,7 @@ import 'flipping_cards.dart';
 import 'half_circle.dart';
 import 'presentation.dart';
 import 'staggerered_menu.dart';
+import 'swipe_cards.dart';
 import 'three_d_planes.dart';
 
 void main() {
@@ -209,6 +210,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('Desplegable Rounded Card'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const SwipeCards(),
+                  ),
+                );
+              },
+              child: const Text('Swipe Cards'),
             )
           ],
         ),
