@@ -40,7 +40,7 @@ This is a series of animations demostrations and experimentation using explicit 
 
 [Animated card 2](https://github.com/hydev777/wt-flutter-samples/blob/main/lib/animated_card_2.dart)
 
-![ezgif-3-4c2b892e4f](https://github.com/hydev777/wt-flutter-samples/assets/84458390/4dc161bc-ab3e-45df-9abe-2acc4d561380)
+![ezgif-1-a7562bd29a](https://github.com/hydev777/wt-flutter-samples/assets/84458390/7efb42a4-a27d-442f-b128-7dc2b6ba6e0c)
 
 [Animated card 3](https://github.com/hydev777/wt-flutter-samples/blob/main/lib/animated_card_3.dart)
 
