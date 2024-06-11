@@ -39,12 +39,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
+        curve: Curves.easeIn,
       ),
     );
 
@@ -54,12 +49,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
+        curve: Curves.easeIn,
       ),
     );
 
@@ -69,12 +59,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        curve: Curves.linear,
-        // curve: const Interval(
-        //   0.200,
-        //   0.350,
-        //   curve: Curves.linear,
-        // ),
+        curve: Curves.easeIn,
       ),
     );
 
@@ -82,11 +67,6 @@ class _AnimatedCard4State extends State<AnimatedCard4>
       CurvedAnimation(
         parent: _animationController,
         curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
       ),
     );
 
@@ -94,11 +74,6 @@ class _AnimatedCard4State extends State<AnimatedCard4>
       CurvedAnimation(
         parent: _animationController,
         curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
       ),
     );
 
@@ -106,11 +81,6 @@ class _AnimatedCard4State extends State<AnimatedCard4>
       CurvedAnimation(
         parent: _animationController,
         curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
       ),
     );
 
@@ -118,11 +88,6 @@ class _AnimatedCard4State extends State<AnimatedCard4>
       CurvedAnimation(
         parent: _animationController,
         curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
       ),
     );
 
@@ -130,11 +95,6 @@ class _AnimatedCard4State extends State<AnimatedCard4>
       CurvedAnimation(
         parent: _animationController,
         curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
       ),
     );
 
@@ -142,11 +102,6 @@ class _AnimatedCard4State extends State<AnimatedCard4>
       CurvedAnimation(
         parent: _animationController,
         curve: Curves.linear,
-        // curve: const Interval(
-        //   0,
-        //   0.200,
-        //   curve: Curves.decelerate,
-        // ),
       ),
     );
   }
@@ -167,7 +122,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
             final rightPosProgress =
                 lerpDouble(10, 140, _animationController.value);
             final topPosProgress =
-                lerpDouble(10, 62, _animationController.value);
+                lerpDouble(10, 64, _animationController.value);
             final titleFontSize =
                 lerpDouble(14, 22, _animationController.value);
             final titleFontWeight = FontWeight.lerp(
@@ -254,12 +209,12 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                               minHeight: 8,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
-                          Text(
+                          const Text(
                             '75%',
-                            style: TextStyle(fontSize: 14),
+                            style: TextStyle(fontSize: 12),
                           ),
                         ],
                       ),
@@ -280,8 +235,11 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                               color: Colors.black12,
                             ),
                           ),
-                          child: Row(
+                          child: const Row(
                             children: [
+                              SizedBox(
+                                width: 3,
+                              ),
                               Icon(
                                 Icons.check_circle_outline,
                                 size: 16,
@@ -326,7 +284,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                     shape: CircleBorder(),
                                     onChanged: (value) {},
                                   ),
-                                  Text('Design Tokens'),
+                                  const Text('Send Gojo'),
                                 ],
                               ),
                               Row(
@@ -336,7 +294,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                     shape: CircleBorder(),
                                     onChanged: (value) {},
                                   ),
-                                  Text('Color System'),
+                                  const Text('Kill Kenjaku'),
                                 ],
                               ),
                               Row(
@@ -346,7 +304,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                     shape: CircleBorder(),
                                     onChanged: (value) {},
                                   ),
-                                  Text('Type System'),
+                                  const Text('Send Yuta'),
                                 ],
                               ),
                               Row(
@@ -356,7 +314,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                     shape: CircleBorder(),
                                     onChanged: (value) {},
                                   ),
-                                  Text('Documentation'),
+                                  const Text('Purple'),
                                 ],
                               )
                             ],
@@ -373,7 +331,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                       left: 50,
                       top: 16,
                       child: Text(
-                        'Design System',
+                        'Kill Sukuna',
                         style: TextStyle(
                           fontSize: titleFontSize,
                           fontWeight: titleFontWeight,
@@ -386,7 +344,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                       child: Row(
                         children: [
                           const Icon(Icons.flag),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                           AnimatedCrossFade(
@@ -411,13 +369,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                 ? CrossFadeState.showFirst
                                 : CrossFadeState.showSecond,
                           ),
-                          // Name(
-                          //   label: _opacityAnimation.isCompleted
-                          //       ? 'Priority'
-                          //       : 'Urgent',
-                          //   opacity: 1,
-                          // ),
-                          SizedBox(
+                          const SizedBox(
                             width: 35,
                           ),
                           Opacity(
@@ -428,7 +380,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                 color: Color(0xFFFFD3D5),
                               ),
                               padding: EdgeInsets.all(8),
-                              child: Row(
+                              child: const Row(
                                 children: [
                                   Text(
                                     'Urgent',
@@ -454,7 +406,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                       child: Row(
                         children: [
                           const Icon(Icons.timelapse_outlined),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                           AnimatedCrossFade(
@@ -479,7 +431,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                 ? CrossFadeState.showFirst
                                 : CrossFadeState.showSecond,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 40,
                           ),
                           Opacity(
@@ -490,7 +442,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                 color: Color(0xFFFFEAC5),
                               ),
                               padding: EdgeInsets.all(8),
-                              child: Row(
+                              child: const Row(
                                 children: [
                                   Text(
                                     'In Progress',
@@ -582,7 +534,7 @@ class Profile extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 4,
           ),
           Name(
