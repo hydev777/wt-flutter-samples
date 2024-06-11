@@ -38,11 +38,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.800,
-        //   0.600,
-        //   curve: Curves.easeIn,
-        // ),
         curve: const Interval(
           0,
           0.200,
@@ -57,11 +52,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.800,
-        //   0.600,
-        //   curve: Curves.easeIn,
-        // ),
         curve: const Interval(
           0,
           0.200,
@@ -76,11 +66,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.900,
-        //   0.800,
-        //   curve: Curves.ease,
-        // ),
         curve: const Interval(
           0,
           0.200,
@@ -95,11 +80,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.900,
-        //   0.800,
-        //   curve: Curves.easeOut,
-        // ),
         curve: const Interval(
           0,
           0.10,
@@ -114,11 +94,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     ).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.900,
-        //   0.800,
-        //   curve: Curves.easeOut,
-        // ),
         curve: const Interval(
           0.200,
           0.350,
@@ -130,11 +105,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     _topItemsPositionTop = Tween<double>(begin: 0, end: 50).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.800,
-        //   0.600,
-        //   curve: Curves.easeInBack,
-        // ),
         curve: const Interval(
           0,
           0.200,
@@ -146,11 +116,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     item1PositionLeft = Tween<double>(begin: 10, end: 20).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.800,
-        //   0.600,
-        //   curve: Curves.decelerate,
-        // ),
         curve: const Interval(
           0,
           0.200,
@@ -162,11 +127,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     item2PositionLeft = Tween<double>(begin: 50, end: 90).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.800,
-        //   0.600,
-        //   curve: Curves.decelerate,
-        // ),
         curve: const Interval(
           0,
           0.200,
@@ -178,11 +138,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     item3PositionLeft = Tween<double>(begin: 90, end: 160).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.800,
-        //   0.600,
-        //   curve: Curves.decelerate,
-        // ),
         curve: const Interval(
           0,
           0.200,
@@ -194,11 +149,6 @@ class _AnimatedCard3State extends State<AnimatedCard3>
     item4PositionLeft = Tween<double>(begin: 130, end: 230).animate(
       CurvedAnimation(
         parent: _animationController,
-        // reverseCurve: const Interval(
-        //   0.800,
-        //   0.600,
-        //   curve: Curves.decelerate,
-        // ),
         curve: const Interval(
           0,
           0.200,

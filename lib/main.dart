@@ -5,6 +5,7 @@ import 'animated_align_example_1.dart';
 import 'animated_button_1.dart';
 import 'animated_card_2.dart';
 import 'animated_card_3.dart';
+import 'animated_card_4.dart';
 import 'animated_menu.dart';
 import 'dynamic_check_mark.dart';
 import 'flipping_cards.dart';
@@ -218,12 +219,25 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const SwipeCards(),
+                    builder: (BuildContext context) => const AnimatedCard4(),
                   ),
                 );
               },
-              child: const Text('Swipe Cards'),
-            )
+              child: const Text('Expandable Task Card'),
+            ),
+            // const SizedBox(
+            //   height: 5,
+            // ),
+            // FilledButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute<void>(
+            //         builder: (BuildContext context) => const SwipeCards(),
+            //       ),
+            //     );
+            //   },
+            //   child: const Text('Swipe Cards'),
+            // )
           ],
         ),
       ),
