@@ -301,7 +301,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                 children: [
                                   Checkbox(
                                     value: true,
-                                    shape: CircleBorder(),
+                                    shape: const CircleBorder(),
                                     onChanged: (value) {},
                                   ),
                                   const Text('Send Yuta'),
@@ -311,7 +311,7 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                                 children: [
                                   Checkbox(
                                     value: false,
-                                    shape: CircleBorder(),
+                                    shape: const CircleBorder(),
                                     onChanged: (value) {},
                                   ),
                                   const Text('Purple'),
@@ -377,21 +377,33 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color(0xFFFFD3D5),
+                                color: const Color(0xFFFFD3D5),
                               ),
-                              padding: EdgeInsets.all(8),
-                              child: const Row(
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                              child: Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     'Urgent',
-                                    style: TextStyle(fontSize: 12),
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color:
+                                          Color.fromARGB(255, 150, 0, 0),
+                                      fontWeight: FontWeight.w700,
+                                    ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 4,
                                   ),
-                                  Icon(
-                                    Icons.keyboard_arrow_down_outlined,
-                                    size: 16,
+                                  Container(
+                                    padding: const EdgeInsets.all(2),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: const Icon(
+                                      Icons.keyboard_arrow_down_outlined,
+                                      size: 16,
+                                    ),
                                   )
                                 ],
                               ),
@@ -439,21 +451,32 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Color(0xFFFFEAC5),
+                                color: const Color(0xFFFFEAC5),
                               ),
-                              padding: EdgeInsets.all(8),
-                              child: const Row(
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                              child: Row(
                                 children: [
-                                  Text(
+                                  const Text(
                                     'In Progress',
-                                    style: TextStyle(fontSize: 12),
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Color.fromARGB(255, 160, 136, 0),
+                                      fontWeight: FontWeight.w700,
+                                    ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 4,
                                   ),
-                                  Icon(
-                                    Icons.keyboard_arrow_down_outlined,
-                                    size: 16,
+                                  Container(
+                                    padding: const EdgeInsets.all(2),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: const Icon(
+                                      Icons.keyboard_arrow_down_outlined,
+                                      size: 16,
+                                    ),
                                   )
                                 ],
                               ),
