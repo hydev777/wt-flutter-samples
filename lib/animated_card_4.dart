@@ -170,30 +170,6 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                 width: _widthAnimation.value,
                 child: Stack(
                   children: [
-                    // Positioned(
-                    //   top: 20,
-                    //   right: 10,
-                    //   child: Opacity(
-                    //     opacity: _opacityAnimation.value,
-                    //     child: Container(
-                    //       width: 32,
-                    //       height: 32,
-                    //       padding: const EdgeInsets.all(5),
-                    //       decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.circular(6),
-                    //         border: Border.all(
-                    //           color: Colors.black12,
-                    //           width: 1,
-                    //         ),
-                    //       ),
-                    //       child: const Icon(
-                    //         color: Colors.black,
-                    //         Icons.more_horiz,
-                    //         size: 20,
-                    //       ),
-                    //     ),
-                    //   ),
-                    // ),
                     Positioned(
                       right: rightPosProgress,
                       top: topPosProgress,
@@ -205,7 +181,8 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                               value: 0.7,
                               borderRadius: BorderRadius.circular(10),
                               valueColor: const AlwaysStoppedAnimation<Color>(
-                                  Colors.green),
+                                Colors.green,
+                              ),
                               minHeight: 8,
                             ),
                           ),
@@ -277,46 +254,26 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                           padding: const EdgeInsets.all(4),
                           child: Column(
                             children: [
-                              Row(
-                                children: [
-                                  Checkbox(
-                                    value: true,
-                                    shape: CircleBorder(),
-                                    onChanged: (value) {},
-                                  ),
-                                  const Text('Send Gojo'),
-                                ],
+                              Task(
+                                isComplete: true,
+                                label: 'Send Gojo',
+                                onChanged: (value) {},
                               ),
-                              Row(
-                                children: [
-                                  Checkbox(
-                                    value: true,
-                                    shape: CircleBorder(),
-                                    onChanged: (value) {},
-                                  ),
-                                  const Text('Kill Kenjaku'),
-                                ],
+                              Task(
+                                isComplete: true,
+                                label: 'Kill Kenjaku',
+                                onChanged: (value) {},
                               ),
-                              Row(
-                                children: [
-                                  Checkbox(
-                                    value: true,
-                                    shape: const CircleBorder(),
-                                    onChanged: (value) {},
-                                  ),
-                                  const Text('Send Yuta'),
-                                ],
+                              Task(
+                                isComplete: true,
+                                label: 'Send Yuta',
+                                onChanged: (value) {},
                               ),
-                              Row(
-                                children: [
-                                  Checkbox(
-                                    value: false,
-                                    shape: const CircleBorder(),
-                                    onChanged: (value) {},
-                                  ),
-                                  const Text('Purple'),
-                                ],
-                              )
+                              Task(
+                                isComplete: false,
+                                label: 'Purple',
+                                onChanged: (value) {},
+                              ),
                             ],
                           ),
                         ),
@@ -372,43 +329,12 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                           const SizedBox(
                             width: 35,
                           ),
-                          Opacity(
+                          StatusLabel(
+                            label: 'Urgent',
+                            backgroundColor: const Color(0xFFFFD3D5),
+                            labelColor: const Color.fromARGB(255, 150, 0, 0),
                             opacity: _opacityAnimation.value,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: const Color(0xFFFFD3D5),
-                              ),
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                              child: Row(
-                                children: [
-                                  const Text(
-                                    'Urgent',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color:
-                                          Color.fromARGB(255, 150, 0, 0),
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 4,
-                                  ),
-                                  Container(
-                                    padding: const EdgeInsets.all(2),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child: const Icon(
-                                      Icons.keyboard_arrow_down_outlined,
-                                      size: 16,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -446,42 +372,12 @@ class _AnimatedCard4State extends State<AnimatedCard4>
                           const SizedBox(
                             width: 40,
                           ),
-                          Opacity(
+                          StatusLabel(
+                            label: 'In Progress',
+                            backgroundColor: const Color(0xFFFFEAC5),
+                            labelColor: const Color.fromARGB(255, 160, 136, 0),
                             opacity: _opacityAnimation.value,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: const Color(0xFFFFEAC5),
-                              ),
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                              child: Row(
-                                children: [
-                                  const Text(
-                                    'In Progress',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      color: Color.fromARGB(255, 160, 136, 0),
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 4,
-                                  ),
-                                  Container(
-                                    padding: const EdgeInsets.all(2),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(4),
-                                    ),
-                                    child: const Icon(
-                                      Icons.keyboard_arrow_down_outlined,
-                                      size: 16,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -515,6 +411,87 @@ class _AnimatedCard4State extends State<AnimatedCard4>
           },
         ),
       ),
+    );
+  }
+}
+
+class StatusLabel extends StatelessWidget {
+  const StatusLabel({
+    super.key,
+    required this.opacity,
+    required this.label,
+    required this.backgroundColor,
+    required this.labelColor,
+  });
+
+  final double opacity;
+  final String label;
+  final Color backgroundColor;
+  final Color labelColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Opacity(
+      opacity: opacity,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: backgroundColor,
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+        child: Row(
+          children: [
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                color: labelColor,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(
+              width: 4,
+            ),
+            Container(
+              padding: const EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: const Icon(
+                Icons.keyboard_arrow_down_outlined,
+                size: 16,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Task extends StatelessWidget {
+  const Task(
+      {super.key,
+      required this.label,
+      required this.onChanged,
+      required this.isComplete});
+
+  final bool isComplete;
+  final String label;
+  final Function(bool?) onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Checkbox(
+          value: isComplete,
+          shape: const CircleBorder(),
+          onChanged: onChanged,
+        ),
+        Text(label),
+      ],
     );
   }
 }
