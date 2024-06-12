@@ -46,6 +46,10 @@ This is a series of animations demostrations and experimentation using explicit 
 
 ![ezgif-1-ca4db839be](https://github.com/hydev777/wt-flutter-samples/assets/84458390/8c70a286-2404-4f78-bee4-20616963fb95)
 
+[Animated task card](https://github.com/hydev777/wt-flutter-samples/blob/main/lib/animated_card_4.dart)
+
+![ezgif-7-7d4875a9de](https://github.com/hydev777/wt-flutter-samples/assets/84458390/1a8c1a32-907f-4ec0-ac22-e44274ea26c1)
+
 
 
 
