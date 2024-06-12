@@ -11,7 +11,6 @@ class AnimatedCard4 extends StatefulWidget {
 
 class _AnimatedCard4State extends State<AnimatedCard4>
     with TickerProviderStateMixin {
-  Alignment priceAlignment = Alignment.centerLeft;
   late final AnimationController _animationController;
   late final Animation<double> _opacityAnimation;
   late final Animation<double> _heightAnimation;
@@ -109,6 +108,9 @@ class _AnimatedCard4State extends State<AnimatedCard4>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Expandable Task Card'),
+      ),
       body: Center(
         child: AnimatedBuilder(
           animation: _animationController,

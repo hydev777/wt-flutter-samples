@@ -45,8 +45,6 @@ class _SwipeCardsState extends State<SwipeCards> {
     super.initState();
 
     _controller.addListener(() {
-      // print(_controller.initialScrollOffset);
-      // print(_controller.position);
       print(_controller.position.context.notificationContext!.widget);
     });
   }
@@ -64,8 +62,6 @@ class _SwipeCardsState extends State<SwipeCards> {
             scrollDirection: Axis.horizontal,
             itemCount: cards.length,
             itemBuilder: (context, index) {
-              final item = context.findRenderObject();
-
               return Container(
                 margin:
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 10),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'dart:math' show pi;
 
-class FlippingCard extends StatefulWidget {
-  const FlippingCard({super.key});
+class FlippingCards extends StatefulWidget {
+  const FlippingCards({super.key});
 
   @override
-  State<FlippingCard> createState() => _FlippingCardState();
+  State<FlippingCards> createState() => _FlippingCardsState();
 }
 
-class _FlippingCardState extends State<FlippingCard>
+class _FlippingCardsState extends State<FlippingCards>
     with SingleTickerProviderStateMixin {
   late AnimationController _controler;
   late Animation<double> _animation;

@@ -220,6 +220,9 @@ class _AnimatedCard2State extends State<AnimatedCard2>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Expandable Credit Card'),
+      ),
       body: Center(
         child: AnimatedBuilder(
           animation: _animationController,

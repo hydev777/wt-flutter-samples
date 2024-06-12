@@ -64,6 +64,9 @@ class _ThreeDPlanesState extends State<ThreeDPlanes>
       ..repeat();
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('3D Planes'),
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AnimatedAlignExample1 extends StatefulWidget {
-  const AnimatedAlignExample1({super.key});
+class AnimatedAlignName extends StatefulWidget {
+  const AnimatedAlignName({super.key});
 
   @override
-  State<AnimatedAlignExample1> createState() => _AnimatedAlignExample1State();
+  State<AnimatedAlignName> createState() => _AnimatedAlignNameState();
 }
 
-class _AnimatedAlignExample1State extends State<AnimatedAlignExample1>
+class _AnimatedAlignNameState extends State<AnimatedAlignName>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation _animation1;
@@ -36,6 +36,9 @@ class _AnimatedAlignExample1State extends State<AnimatedAlignExample1>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Animated Align Name'),
+      ),
       body: Container(
         color: Colors.white,
         child: AnimatedBuilder(

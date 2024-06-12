@@ -12,7 +12,7 @@ class _StaggeredMenuState extends State<StaggeredMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Staggered drawer menu'),
+        title: const Text('Staggered Drawer Menu'),
       ),
       drawer: const Menu(),
     );

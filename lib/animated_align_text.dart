@@ -56,6 +56,9 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Animated Align Text'),
+      ),
       body: Container(
         padding: const EdgeInsets.all(10),
         color: Colors.white,

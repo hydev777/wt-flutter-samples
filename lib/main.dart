@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'animated_align_text.dart';
-import 'animated_align_example_1.dart';
-import 'animated_button_1.dart';
+import 'animated_align_name.dart';
+import 'animated_presentation_card.dart';
 import 'animated_card_2.dart';
 import 'animated_card_3.dart';
 import 'animated_card_4.dart';
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const FlippingCard(),
+                    builder: (BuildContext context) => const FlippingCards(),
                   ),
                 );
               },
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimatedButton1(),
+                    builder: (BuildContext context) => const AnimatedPresentationCard(),
                   ),
                 );
               },
@@ -127,11 +127,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
                     builder: (BuildContext context) =>
-                        const AnimatedAlignExample1(),
+                        const AnimatedAlignName(),
                   ),
                 );
               },
-              child: const Text('Animated Align 1'),
+              child: const Text('Animated Align Name'),
             ),
             const SizedBox(
               height: 5,
@@ -167,7 +167,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimatedDropDownMenu(),
+                    builder: (BuildContext context) =>
+                        const AnimatedDropDownMenu(),
                   ),
                 );
               },
@@ -197,7 +198,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: const Text('Desplegable Card'),
+              child: const Text('Expandable Credit Card'),
             ),
             const SizedBox(
               height: 5,
@@ -210,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: const Text('Desplegable Rounded Card'),
+              child: const Text('Expandable Profile Card'),
             ),
             const SizedBox(
               height: 5,

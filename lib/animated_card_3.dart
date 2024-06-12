@@ -161,6 +161,9 @@ class _AnimatedCard3State extends State<AnimatedCard3>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Expandable Profile Card'),
+      ),
       body: Center(
         child: AnimatedBuilder(
           animation: _animationController,

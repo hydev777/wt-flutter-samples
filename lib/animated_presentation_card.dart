@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 const _maxHeight = 120.0;
 const _minHeight = 80.0;
 
-class AnimatedButton1 extends StatefulWidget {
-  const AnimatedButton1({super.key});
+class AnimatedPresentationCard extends StatefulWidget {
+  const AnimatedPresentationCard({super.key});
 
   @override
-  State<AnimatedButton1> createState() => _AnimatedButton1State();
+  State<AnimatedPresentationCard> createState() => _AnimatedPresentationCardState();
 }
 
-class _AnimatedButton1State extends State<AnimatedButton1> with SingleTickerProviderStateMixin {
+class _AnimatedPresentationCardState extends State<AnimatedPresentationCard> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   bool _small = true;
 
@@ -39,7 +39,7 @@ class _AnimatedButton1State extends State<AnimatedButton1> with SingleTickerProv
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Animated Button'),
+        title: const Text('Animated Presentation Card'),
       ),
       body: Center(
         child: AnimatedBuilder(
