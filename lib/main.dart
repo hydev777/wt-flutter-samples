@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 );
               },
-              child: const Text('Animated Button'),
+              child: const Text('Animated Presentation Card'),
             ),
             const SizedBox(
               height: 5,
@@ -168,11 +168,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
                     builder: (BuildContext context) =>
-                        const AnimatedDropDownMenu(),
+                        const AnimatedMenu(),
                   ),
                 );
               },
-              child: const Text('Menu Widget'),
+              child: const Text('Animated Menu'),
             ),
             const SizedBox(
               height: 5,

@@ -1,80 +1,85 @@
 import 'package:flutter/material.dart';
 
-class AnimatedDropDownMenu extends StatefulWidget {
-  const AnimatedDropDownMenu({super.key});
+class AnimatedMenu extends StatefulWidget {
+  const AnimatedMenu({super.key});
 
   @override
-  State<AnimatedDropDownMenu> createState() => _AnimatedDropDownMenuState();
+  State<AnimatedMenu> createState() => _AnimatedMenuState();
 }
 
-class _AnimatedDropDownMenuState extends State<AnimatedDropDownMenu> {
+class _AnimatedMenuState extends State<AnimatedMenu> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          AnimatedCategory(
-            options: const [
-              'Health',
-              'Practices',
-              'Drugs',
-              'Medicine',
-            ],
-            tittle: 'HEALTHCARE',
-            backgroundColor: Colors.blue[200]!,
-            titleColor: Colors.blue[900]!,
-          ),
-          AnimatedCategory(
-            options: const [
-              'Best Ingredients',
-              'Recipes',
-              'Spicy',
-              'Meat',
-              'Sweet',
-            ],
-            tittle: 'FOOD & DRINK',
-            backgroundColor: Colors.green,
-            titleColor: Colors.yellow[700]!,
-          ),
-          AnimatedCategory(
-            options: const [
-              'Make Up',
-              'Stylish',
-              'Faces',
-              'Dressess'
-            ],
-            tittle: 'BEAUTY',
-            backgroundColor: Colors.pink[100]!,
-            titleColor: Colors.pink,
-          ),
-          AnimatedCategory(
-            options: const [
-              'Baby Shower',
-              'Toys',
-              'Games',
-              'Early Learning',
-              'Baby food',
-              'Clothes',
-            ],
-            tittle: 'BABY & KIDS',
-            backgroundColor: Colors.blue[900]!,
-            titleColor: Colors.pink[100]!,
-          ),
-          AnimatedCategory(
-            options: const [
-              'Furnaces',
-              'Couch',
-              'Designs',
-              'Colors',
-              'Combinations',
-              'Internals',
-            ],
-            tittle: 'HOMEWARES',
-            backgroundColor: Colors.yellow[700]!,
-            titleColor: Colors.white,
-          ),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Animated Menu'),
+      ),
+      body: Material(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            AnimatedCategory(
+              options: const [
+                'Health',
+                'Practices',
+                'Drugs',
+                'Medicine',
+              ],
+              tittle: 'HEALTHCARE',
+              backgroundColor: Colors.blue[200]!,
+              titleColor: Colors.blue[900]!,
+            ),
+            AnimatedCategory(
+              options: const [
+                'Best Ingredients',
+                'Recipes',
+                'Spicy',
+                'Meat',
+                'Sweet',
+              ],
+              tittle: 'FOOD & DRINK',
+              backgroundColor: Colors.green,
+              titleColor: Colors.yellow[700]!,
+            ),
+            AnimatedCategory(
+              options: const [
+                'Make Up',
+                'Stylish',
+                'Faces',
+                'Dressess'
+              ],
+              tittle: 'BEAUTY',
+              backgroundColor: Colors.pink[100]!,
+              titleColor: Colors.pink,
+            ),
+            AnimatedCategory(
+              options: const [
+                'Baby Shower',
+                'Toys',
+                'Games',
+                'Early Learning',
+                'Baby food',
+                'Clothes',
+              ],
+              tittle: 'BABY & KIDS',
+              backgroundColor: Colors.blue[900]!,
+              titleColor: Colors.pink[100]!,
+            ),
+            AnimatedCategory(
+              options: const [
+                'Furnaces',
+                'Couch',
+                'Designs',
+                'Colors',
+                'Combinations',
+                'Internals',
+              ],
+              tittle: 'HOMEWARES',
+              backgroundColor: Colors.yellow[700]!,
+              titleColor: Colors.white,
+            ),
+          ],
+        ),
       ),
     );
   }
