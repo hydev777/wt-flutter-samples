@@ -225,19 +225,19 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Expandable Task Card'),
             ),
-            // const SizedBox(
-            //   height: 5,
-            // ),
-            // FilledButton(
-            //   onPressed: () {
-            //     Navigator.of(context).push(
-            //       MaterialPageRoute<void>(
-            //         builder: (BuildContext context) => const SwipeCards(),
-            //       ),
-            //     );
-            //   },
-            //   child: const Text('Swipe Cards'),
-            // )
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const SwipeCards(),
+                  ),
+                );
+              },
+              child: const Text('Swipe Cards'),
+            )
           ],
         ),
       ),

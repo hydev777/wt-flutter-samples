@@ -9,6 +9,7 @@ class SwipeCards extends StatefulWidget {
 
 class _SwipeCardsState extends State<SwipeCards> {
   final ScrollController _controller = ScrollController();
+  late PageController _pageViewController;
   List<Map<String, dynamic>> cards = [
     {
       "name": "Sukuna",
@@ -43,10 +44,16 @@ class _SwipeCardsState extends State<SwipeCards> {
   @override
   void initState() {
     super.initState();
-
+    _pageViewController = PageController();
     _controller.addListener(() {
       print(_controller.position.context.notificationContext!.widget);
     });
+  }
+
+  @override
+  void dispose() {
+    _pageViewController.dispose();
+    super.dispose();
   }
 
   @override
@@ -54,27 +61,31 @@ class _SwipeCardsState extends State<SwipeCards> {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Colors.blue,
           height: 280,
           width: 350,
-          child: ListView.builder(
-            controller: _controller,
-            scrollDirection: Axis.horizontal,
-            itemCount: cards.length,
-            itemBuilder: (context, index) {
-              return Container(
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                height: 200,
-                width: 200,
-                decoration: const BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10),
-                  ),
-                ),
-              );
-            },
+          child: PageView(
+            controller: _pageViewController,
+            onPageChanged: (page) {},
+
+            children: <Widget>[
+              Container(
+                color: Colors.red,
+                alignment: Alignment.center,
+                margin: EdgeInsets.all(4),
+                child: Text('First Page'),
+              ),
+              Container(
+                margin: EdgeInsets.all(4),
+                alignment: Alignment.center,
+                child: Text('Second Page'),
+              ),
+              Container(
+                color: Colors.yellow,
+                margin: EdgeInsets.all(4),
+                alignment: Alignment.center,
+                child: Text('Third Page'),
+              ),
+            ],
           ),
         ),
       ),
