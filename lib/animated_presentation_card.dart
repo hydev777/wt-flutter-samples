@@ -37,7 +37,7 @@ class _AnimatedPresentationCardState extends State<AnimatedPresentationCard> wit
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blue[100],
       appBar: AppBar(
         title: const Text('Animated Presentation Card'),
       ),

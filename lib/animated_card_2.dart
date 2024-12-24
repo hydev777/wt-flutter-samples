@@ -43,15 +43,6 @@ class _AnimatedCard2State extends State<AnimatedCard2>
     },
   ];
 
-  void selectPrice(int id) {
-    int selectedIndex =
-        _prices.indexWhere((price) => price['selected'] == true);
-    _prices[selectedIndex]['selected'] = false;
-    int indexChange = _prices.indexWhere((price) => price['id'] == id);
-    _prices[indexChange]['selected'] = true;
-    setState(() {});
-  }
-
   @override
   void initState() {
     super.initState();
