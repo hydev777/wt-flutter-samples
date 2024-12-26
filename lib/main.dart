@@ -16,9 +16,7 @@ import 'screens/half_circle.dart';
 import 'screens/numbers_circular_rotation.dart';
 import 'screens/presentation.dart';
 import 'screens/staggerered_menu.dart';
-import 'screens/swipe_cards.dart';
 import 'screens/three_d_planes.dart';
-import 'screens/worlds_animation.dart';
 
 void main() {
   runApp(const MyApp());
