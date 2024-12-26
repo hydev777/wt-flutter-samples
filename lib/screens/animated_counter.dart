@@ -79,6 +79,9 @@ class _AnimatedCounterState extends State<AnimatedCounter>
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Animated Counter'),
+        ),
         body: Center(
           child: AnimatedBuilder(
               animation: _controller,

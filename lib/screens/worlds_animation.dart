@@ -66,6 +66,9 @@ class _AnimationExampleState extends State<AnimationExample>
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Rotating Worlds'),
+      ),
       body: Stack(
         children: [
           Positioned(

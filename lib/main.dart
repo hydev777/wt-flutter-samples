@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 
-import 'animated_align_text.dart';
-import 'animated_align_name.dart';
-import 'animated_counter.dart';
-import 'animated_presentation_card.dart';
-import 'animated_card_2.dart';
-import 'animated_card_3.dart';
-import 'animated_card_4.dart';
-import 'animated_menu.dart';
-import 'animated_rotating_card.dart';
-import 'dynamic_check_mark.dart';
-import 'flipping_cards.dart';
-import 'half_circle.dart';
-import 'numbers_circular_rotation.dart';
-import 'presentation.dart';
-import 'staggerered_menu.dart';
-import 'swipe_cards.dart';
-import 'three_d_planes.dart';
-import 'worlds_animation.dart';
+import 'screens/animated_align_text.dart';
+import 'screens/animated_align_name.dart';
+import 'screens/animated_counter.dart';
+import 'screens/animated_presentation_card.dart';
+import 'screens/animated_card_2.dart';
+import 'screens/animated_card_3.dart';
+import 'screens/animated_card_4.dart';
+import 'screens/animated_menu.dart';
+import 'screens/animated_rotating_card.dart';
+import 'screens/dynamic_check_mark.dart';
+import 'screens/expandable_menu.dart';
+import 'screens/flipping_cards.dart';
+import 'screens/half_circle.dart';
+import 'screens/numbers_circular_rotation.dart';
+import 'screens/presentation.dart';
+import 'screens/staggerered_menu.dart';
+import 'screens/swipe_cards.dart';
+import 'screens/three_d_planes.dart';
+import 'screens/worlds_animation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -76,7 +77,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimatedRotatingCard(),
+                    builder: (BuildContext context) =>
+                        const AnimatedRotatingCard(),
                   ),
                 );
               },
@@ -248,33 +250,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const SwipeCards(),
-                  ),
-                );
-              },
-              child: const Text('Swipe Cards'),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            FilledButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimationExample(),
-                  ),
-                );
-              },
-              child: const Text('Rotating World'),
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            FilledButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const AnimatedCircleNumbers(),
+                    builder: (BuildContext context) =>
+                        const AnimatedCircleNumbers(),
                   ),
                 );
               },
@@ -292,6 +269,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: const Text('Animated counter'),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (BuildContext context) => const AnimatedExpandableMenu(),
+                  ),
+                );
+              },
+              child: const Text('Animated Expandable Menu'),
             )
           ],
         ),
