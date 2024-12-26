@@ -14,7 +14,7 @@ class _StaggeredMenuState extends State<StaggeredMenu> {
       appBar: AppBar(
         title: const Text('Staggered Drawer Menu'),
       ),
-      drawer: const Menu(),
+      endDrawer: const Menu(),
     );
   }
 }
@@ -170,15 +170,10 @@ class _MenuState extends State<Menu> with SingleTickerProviderStateMixin {
       color: Colors.white,
       child: Stack(
         children: [
-          _buildFlutterLogo(),
           _buildContent(),
         ],
       ),
     );
-  }
-
-  Widget _buildFlutterLogo() {
-    return Container();
   }
 
   Widget _buildContent() {
