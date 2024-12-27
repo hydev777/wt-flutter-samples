@@ -17,16 +17,16 @@ class _AnimatedExpandableMenuState extends State<AnimatedExpandableMenu>
       Tween<double>(begin: 110, end: 300).animate(
     CurvedAnimation(
       parent: _controller,
-      curve: Curves.bounceOut,
-      reverseCurve: Curves.bounceIn,
+      curve: Curves.easeInOutBack,
+      reverseCurve: Curves.easeInOutBack,
     ),
   );
   late final Animation<double> containerHeight =
       Tween<double>(begin: 50, end: 280).animate(
     CurvedAnimation(
       parent: _controller,
-      curve: Curves.bounceOut,
-      reverseCurve: Curves.bounceIn,
+      curve: Curves.easeInOutBack,
+      reverseCurve: Curves.easeInOutBack,
     ),
   );
   late final Animation<double> containerRadius =
@@ -44,7 +44,7 @@ class _AnimatedExpandableMenuState extends State<AnimatedExpandableMenu>
       parent: _controller,
       curve: const Interval(
         0,
-        0.4,
+        0.1,
         curve: Curves.decelerate,
       ),
     ),
@@ -67,17 +67,18 @@ class _AnimatedExpandableMenuState extends State<AnimatedExpandableMenu>
     end: 1,
   ).animate(
     CurvedAnimation(
-        parent: _controller,
-        curve: const Interval(
-          0.2,
-          1,
-          curve: Curves.decelerate,
-        ),
-        reverseCurve: const Interval(
-          0.8,
-          1,
-          curve: Curves.decelerate,
-        )),
+      parent: _controller,
+      curve: const Interval(
+        0.2,
+        1,
+        curve: Curves.decelerate,
+      ),
+      reverseCurve: const Interval(
+        0.6,
+        1,
+        curve: Curves.decelerate,
+      ),
+    ),
   );
   late final closeButtonTopPosition = Tween<double>(
     begin: 60,
