@@ -1,23 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/animated_align_text.dart';
-import 'screens/animated_align_name.dart';
-import 'screens/animated_card_5.dart';
-import 'screens/animated_counter.dart';
-import 'screens/animated_presentation_card.dart';
-import 'screens/animated_card_2.dart';
-import 'screens/animated_card_3.dart';
-import 'screens/animated_card_4.dart';
-import 'screens/animated_menu.dart';
-import 'screens/animated_rotating_card.dart';
-import 'screens/dynamic_check_mark.dart';
-import 'screens/expandable_menu.dart';
-import 'screens/flipping_cards.dart';
-import 'screens/half_circle.dart';
-import 'screens/numbers_circular_rotation.dart';
-import 'screens/presentation.dart';
-import 'screens/staggerered_menu.dart';
-import 'screens/three_d_planes.dart';
+import 'screens/screens.dart';
 
 void main() {
   runApp(const MyApp());
@@ -296,6 +279,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text('Animated Card Rotation'),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              FilledButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const AnimatedCard6(),
+                    ),
+                  );
+                },
+                child: const Text('Animated Card 6'),
               )
             ],
           ),
