@@ -217,10 +217,13 @@ class _AnimatedCard5State extends State<AnimatedCard5>
                                 }
                               },
                               onPanDown: (details) {
-                                if (_controller.isCompleted) {
-                                  _controller.reverse();
+                                if (details.localPosition.dy > 200) {
                                 } else {
-                                  _controller.forward();
+                                  if (_controller.isCompleted) {
+                                    _controller.reverse();
+                                  } else {
+                                    _controller.forward();
+                                  }
                                 }
                               },
                               child: Stack(
