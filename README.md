@@ -58,6 +58,13 @@ This is a series of animations demostrations and experimentation using explicit 
 
 ![animated_menu_expandable_4](https://github.com/user-attachments/assets/240e787f-bad4-4845-a26f-49d8029107da)
 
+[Animated card rotation](https://github.com/hydev777/wt-flutter-samples/blob/main/lib/screens/animated_card_5.dart)
+
+![animated_drag card_4](https://github.com/user-attachments/assets/4fe3207f-d001-4dc2-8476-094ae5030f0b)
+
+
+
+
 
 
 
