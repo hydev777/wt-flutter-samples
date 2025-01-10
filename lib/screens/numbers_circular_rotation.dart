@@ -26,22 +26,22 @@ class _AnimatedCircleNumbersState extends State<AnimatedCircleNumbers>
 
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5),
+      duration: const Duration(seconds: 5),
     )..repeat();
 
     _controller2 = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 10),
+      duration: const Duration(seconds: 10),
     )..repeat();
 
     _controller3 = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 15),
+      duration: const Duration(seconds: 15),
     )..repeat();
 
     _controller4 = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 20),
+      duration: const Duration(seconds: 20),
     )..repeat();
 
     rotation = CurvedAnimation(

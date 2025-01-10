@@ -8,7 +8,6 @@ class SwipeCards extends StatefulWidget {
 }
 
 class _SwipeCardsState extends State<SwipeCards> {
-  final ScrollController _controller = ScrollController();
   late PageController _pageViewController;
   List<Map<String, dynamic>> cards = [
     {
@@ -45,9 +44,6 @@ class _SwipeCardsState extends State<SwipeCards> {
   void initState() {
     super.initState();
     _pageViewController = PageController();
-    _controller.addListener(() {
-      print(_controller.position.context.notificationContext!.widget);
-    });
   }
 
   @override
@@ -60,7 +56,7 @@ class _SwipeCardsState extends State<SwipeCards> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
+        child: SizedBox(
           height: 280,
           width: 350,
           child: PageView(
@@ -71,19 +67,19 @@ class _SwipeCardsState extends State<SwipeCards> {
               Container(
                 color: Colors.red,
                 alignment: Alignment.center,
-                margin: EdgeInsets.all(4),
-                child: Text('First Page'),
+                margin: const EdgeInsets.all(4),
+                child: const Text('First Page'),
               ),
               Container(
-                margin: EdgeInsets.all(4),
+                margin: const EdgeInsets.all(4),
                 alignment: Alignment.center,
-                child: Text('Second Page'),
+                child: const Text('Second Page'),
               ),
               Container(
                 color: Colors.yellow,
-                margin: EdgeInsets.all(4),
+                margin: const EdgeInsets.all(4),
                 alignment: Alignment.center,
-                child: Text('Third Page'),
+                child: const Text('Third Page'),
               ),
             ],
           ),

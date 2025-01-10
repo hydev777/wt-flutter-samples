@@ -34,6 +34,12 @@ class _AnimatedAlignNameState extends State<AnimatedAlignName>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -57,7 +63,8 @@ class _AnimatedAlignNameState extends State<AnimatedAlignName>
                     alignment: _animation1.value,
                     child: const Text(
                       'Wilson',
-                      style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Align(
@@ -178,7 +185,7 @@ class _AnimatedAlignNameState extends State<AnimatedAlignName>
                               },
                             ),
                             const SizedBox(
-                            width: 30,
+                              width: 30,
                             ),
                             IconButton(
                               icon: const Icon(Icons.arrow_forward),

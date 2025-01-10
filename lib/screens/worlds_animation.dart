@@ -51,7 +51,6 @@ class _AnimationExampleState extends State<AnimationExample>
     _pageController.addListener(() {
       pageTransition = _pageController.page!;
       currentPage = _pageController.page!.truncate();
-      print("currentTransition ====>> $currentPage");
     });
   }
 

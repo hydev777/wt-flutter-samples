@@ -209,6 +209,13 @@ class _AnimatedCard2State extends State<AnimatedCard2>
   }
 
   @override
+  void dispose() {
+    _animationController.dispose();
+    _animationController2.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

@@ -45,12 +45,19 @@ class _AnimatedAlignTextState extends State<AnimatedAlignText>
       duration: const Duration(milliseconds: 500),
     );
 
-    _rotationAnimation = Tween<double>(begin: 0.0, end: 2 * pi).animate(_controller);
+    _rotationAnimation =
+        Tween<double>(begin: 0.0, end: 2 * pi).animate(_controller);
 
     _alignmentAnimation = Tween<Alignment>(
       begin: Alignment.topLeft,
       end: Alignment.bottomLeft,
     ).animate(_controller);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
