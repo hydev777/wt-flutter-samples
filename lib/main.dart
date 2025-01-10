@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/animated_align_text.dart';
 import 'screens/animated_align_name.dart';
+import 'screens/animated_card_5.dart';
 import 'screens/animated_counter.dart';
 import 'screens/animated_presentation_card.dart';
 import 'screens/animated_card_2.dart';
@@ -282,6 +283,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
                 child: const Text('Animated Expandable Menu'),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              FilledButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const AnimatedCard5(),
+                    ),
+                  );
+                },
+                child: const Text('Animated Card Rotation'),
               )
             ],
           ),
