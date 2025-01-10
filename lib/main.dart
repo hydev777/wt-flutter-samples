@@ -17,285 +17,122 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Animations Examples'),
+        ),
+        body: const Center(
+          child: SingleChildScrollView(
+            child: Column(
+              spacing: 5,
+              children: <Widget>[
+                _CustomButton(
+                  text: 'Flipping cards',
+                  to: FlippingCards(),
+                ),
+                _CustomButton(
+                  text: 'Rotating cards',
+                  to: AnimatedRotatingCard(),
+                ),
+                _CustomButton(
+                  text: 'Presentation',
+                  to: Presentation(),
+                ),
+                _CustomButton(
+                  text: 'Half Circle',
+                  to: HalfCircle(),
+                ),
+                _CustomButton(
+                  text: 'Animated Presentation Card',
+                  to: AnimatedPresentationCard(),
+                ),
+                _CustomButton(
+                  text: 'Dynamic Check Mark',
+                  to: DynamicCheckMark(),
+                ),
+                _CustomButton(
+                  text: 'Animated Align Name',
+                  to: AnimatedAlignName(),
+                ),
+                _CustomButton(
+                  text: 'Animated Align Text',
+                  to: AnimatedAlignText(),
+                ),
+                _CustomButton(
+                  text: '3D Planes',
+                  to: ThreeDPlanes(),
+                ),
+                _CustomButton(
+                  text: 'Animated Menu',
+                  to: AnimatedMenu(),
+                ),
+                _CustomButton(
+                  text: 'Staggered Menu Widget',
+                  to: StaggeredMenu(),
+                ),
+                _CustomButton(
+                  text: 'Expandable Credit Card',
+                  to: AnimatedCard2(),
+                ),
+                _CustomButton(
+                  text: 'Expandable Profile Card',
+                  to: AnimatedCard3(),
+                ),
+                _CustomButton(
+                  text: 'Expandable Task Card',
+                  to: AnimatedCard4(),
+                ),
+                _CustomButton(
+                  text: 'Rotating numbers',
+                  to: AnimatedCircleNumbers(),
+                ),
+                _CustomButton(
+                  text: 'Animated counter',
+                  to: AnimatedCounter(),
+                ),
+                _CustomButton(
+                  text: 'Animated Expandable Menu',
+                  to: AnimatedExpandableMenu(),
+                ),
+                _CustomButton(
+                  text: 'Animated Card Rotation',
+                  to: AnimatedCard5(),
+                ),
+                _CustomButton(
+                  text: 'Animated Card 6',
+                  to: AnimatedCard6(),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class _CustomButton extends StatelessWidget {
+  const _CustomButton({
+    required this.text,
+    required this.to,
+  });
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+  final String text;
+  final Widget to;
 
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Animations Examples'),
-      ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40),
-          child: ListView(
-            children: <Widget>[
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const FlippingCards(),
-                    ),
-                  );
-                },
-                child: const Text('Flipping cards'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const AnimatedRotatingCard(),
-                    ),
-                  );
-                },
-                child: const Text('Rotating cards'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const Presentation(),
-                    ),
-                  );
-                },
-                child: const Text('Presentation'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const HalfCircle(),
-                    ),
-                  );
-                },
-                child: const Text('Half Circle'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const AnimatedPresentationCard(),
-                    ),
-                  );
-                },
-                child: const Text('Animated Presentation Card'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const DynamicCheckMark(),
-                    ),
-                  );
-                },
-                child: const Text('Dynamic Check Mark'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const AnimatedAlignName(),
-                    ),
-                  );
-                },
-                child: const Text('Animated Align Name'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const AnimatedAlignText(),
-                    ),
-                  );
-                },
-                child: const Text('Animated Align Text'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const ThreeDPlanes(),
-                    ),
-                  );
-                },
-                child: const Text('3D Planes'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedMenu(),
-                    ),
-                  );
-                },
-                child: const Text('Animated Menu'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const StaggeredMenu(),
-                    ),
-                  );
-                },
-                child: const Text('Staggered Menu Widget'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedCard2(),
-                    ),
-                  );
-                },
-                child: const Text('Expandable Credit Card'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedCard3(),
-                    ),
-                  );
-                },
-                child: const Text('Expandable Profile Card'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedCard4(),
-                    ),
-                  );
-                },
-                child: const Text('Expandable Task Card'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) =>
-                          const AnimatedCircleNumbers(),
-                    ),
-                  );
-                },
-                child: const Text('Rotating numbers'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedCounter(),
-                    ),
-                  );
-                },
-                child: const Text('Animated counter'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedExpandableMenu(),
-                    ),
-                  );
-                },
-                child: const Text('Animated Expandable Menu'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedCard5(),
-                    ),
-                  );
-                },
-                child: const Text('Animated Card Rotation'),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              FilledButton(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const AnimatedCard6(),
-                    ),
-                  );
-                },
-                child: const Text('Animated Card 6'),
-              )
-            ],
-          ),
-        ),
+    return SizedBox(
+      width: 300,
+      child: FilledButton(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute<void>(
+              builder: (BuildContext context) => to,
+            ),
+          );
+        },
+        child: Text(text),
       ),
     );
   }

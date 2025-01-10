@@ -199,7 +199,7 @@ class _AnimatedCard5State extends State<AnimatedCard5>
                                 if (details.localPosition.dy <
                                     currentLocalPosition) {
                                   setState(() {
-                                    topPosition += 2;
+                                    topPosition += 3;
                                   });
                                 }
                               },
@@ -217,13 +217,10 @@ class _AnimatedCard5State extends State<AnimatedCard5>
                                 }
                               },
                               onPanDown: (details) {
-                                if (details.localPosition.dy > 200) {
+                                if (_controller.isCompleted) {
+                                  _controller.reverse();
                                 } else {
-                                  if (_controller.isCompleted) {
-                                    _controller.reverse();
-                                  } else {
-                                    _controller.forward();
-                                  }
+                                  _controller.forward();
                                 }
                               },
                               child: Stack(
