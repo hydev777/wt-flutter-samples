@@ -95,13 +95,52 @@ class _AnimatedCard5State extends State<AnimatedCard5>
     }
   ];
 
-  void setTopPosition(double begin) {
+  void _setTopPosition(double begin) {
     topPositionMovement = Tween<double>(begin: begin, end: 300).animate(
       CurvedAnimation(
         parent: _controller2,
         curve: Curves.bounceOut,
       ),
     );
+  }
+
+  void _onVerticalDragUpdate(DragUpdateDetails details) {
+    dragEndPosition = details.localPosition.dy;
+
+    if (currentLocalPosition == 0) {
+      currentLocalPosition = details.localPosition.dy;
+    }
+
+    if (details.localPosition.dy < currentLocalPosition) {
+      setState(() {
+        topPosition += 3;
+      });
+    }
+  }
+
+  void _onVerticalDragEnd(DragEndDetails details) {
+    if (dragEndPosition > dragStartPosition) {
+      currentLocalPosition = details.localPosition.dy;
+    } else if (dragEndPosition < dragStartPosition) {
+      currentLocalPosition = details.localPosition.dy;
+      _setTopPosition(topPosition);
+      currentLocalPosition = 0;
+      _controller2.forward();
+    }
+  }
+
+  void _onPanDown(DragDownDetails details) {
+    if (details.localPosition.dy < 200) {
+      if (_controller.isCompleted) {
+        _controller.reverse();
+      } else {
+        _controller.forward();
+      }
+    }
+  }
+
+  void _onVerticalDragStart(DragStartDetails details) {
+    dragStartPosition = details.localPosition.dy;
   }
 
   @override
@@ -127,7 +166,7 @@ class _AnimatedCard5State extends State<AnimatedCard5>
     topPositionMovement.addListener(() {
       topPosition = topPositionMovement.value;
       if (topPositionMovement.value == 300) {
-        setTopPosition(300);
+        _setTopPosition(300);
         if (topPositionMovement.status == AnimationStatus.completed) {
           if (index < (movies.length - 1)) {
             setState(() {
@@ -185,47 +224,10 @@ class _AnimatedCard5State extends State<AnimatedCard5>
                               ..rotateY((_controller.value * 2) * pi),
                             alignment: Alignment.center,
                             child: GestureDetector(
-                              onVerticalDragStart: (details) {
-                                dragStartPosition = details.localPosition.dy;
-                              },
-                              onVerticalDragUpdate: (details) {
-                                dragEndPosition = details.localPosition.dy;
-
-                                if (currentLocalPosition == 0) {
-                                  currentLocalPosition =
-                                      details.localPosition.dy;
-                                }
-
-                                if (details.localPosition.dy <
-                                    currentLocalPosition) {
-                                  setState(() {
-                                    topPosition += 3;
-                                  });
-                                }
-                              },
-                              onVerticalDragEnd: (details) {
-                                if (dragEndPosition > dragStartPosition) {
-                                  currentLocalPosition =
-                                      details.localPosition.dy;
-                                } else if (dragEndPosition <
-                                    dragStartPosition) {
-                                  currentLocalPosition =
-                                      details.localPosition.dy;
-                                  setTopPosition(topPosition);
-                                  currentLocalPosition = 0;
-                                  _controller2.forward();
-                                }
-                              },
-                              onPanDown: (details) {
-                                if (details.localPosition.dy > 200) {
-                                } else {
-                                  if (_controller.isCompleted) {
-                                    _controller.reverse();
-                                  } else {
-                                    _controller.forward();
-                                  }
-                                }
-                              },
+                              onVerticalDragStart: _onVerticalDragStart,
+                              onVerticalDragUpdate: _onVerticalDragUpdate,
+                              onVerticalDragEnd: _onVerticalDragEnd,
+                              onPanDown: _onPanDown,
                               child: Stack(
                                 children: [
                                   AnimatedContainer(
