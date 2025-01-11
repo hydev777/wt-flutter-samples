@@ -143,10 +143,10 @@ class _CustomButton extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
-              color: Colors.black38,
-              offset: Offset(0, 6),
+              color: Colors.blue[200]!,
+              offset: const Offset(0, 6),
               blurRadius: 10,
               spreadRadius: 0,
             )
