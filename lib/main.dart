@@ -151,12 +151,10 @@ class _CustomButton extends StatelessWidget {
               spreadRadius: 0,
             )
           ],
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             colors: [
-              Colors.orange[900]!,
-              Colors.orange[600]!,
-              Colors.orange[300]!,
-              Colors.yellow[600]!,
+              Colors.blue,
+              Colors.lightBlueAccent,
             ],
           ),
         ),
