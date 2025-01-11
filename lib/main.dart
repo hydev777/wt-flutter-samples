@@ -21,88 +21,95 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Animations Examples'),
         ),
-        body: const Center(
+        body: const Align(
+          alignment: Alignment.topCenter,
           child: SingleChildScrollView(
-            child: Column(
-              spacing: 5,
-              children: <Widget>[
-                _CustomButton(
-                  text: 'Flipping cards',
-                  to: FlippingCards(),
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  spacing: 20,
+                  children: <Widget>[
+                    _CustomButton(
+                      text: 'Flipping cards',
+                      to: FlippingCards(),
+                    ),
+                    _CustomButton(
+                      text: 'Rotating cards',
+                      to: AnimatedRotatingCard(),
+                    ),
+                    _CustomButton(
+                      text: 'Presentation',
+                      to: Presentation(),
+                    ),
+                    _CustomButton(
+                      text: 'Half Circle',
+                      to: HalfCircle(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated Presentation Card',
+                      to: AnimatedPresentationCard(),
+                    ),
+                    _CustomButton(
+                      text: 'Dynamic Check Mark',
+                      to: DynamicCheckMark(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated Align Name',
+                      to: AnimatedAlignName(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated Align Text',
+                      to: AnimatedAlignText(),
+                    ),
+                    _CustomButton(
+                      text: '3D Planes',
+                      to: ThreeDPlanes(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated Menu',
+                      to: AnimatedMenu(),
+                    ),
+                    _CustomButton(
+                      text: 'Staggered Menu Widget',
+                      to: StaggeredMenu(),
+                    ),
+                    _CustomButton(
+                      text: 'Expandable Credit Card',
+                      to: AnimatedCard2(),
+                    ),
+                    _CustomButton(
+                      text: 'Expandable Profile Card',
+                      to: AnimatedCard3(),
+                    ),
+                    _CustomButton(
+                      text: 'Expandable Task Card',
+                      to: AnimatedCard4(),
+                    ),
+                    _CustomButton(
+                      text: 'Rotating numbers',
+                      to: AnimatedCircleNumbers(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated counter',
+                      to: AnimatedCounter(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated Expandable Menu',
+                      to: AnimatedExpandableMenu(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated Card Rotation',
+                      to: AnimatedCard5(),
+                    ),
+                    _CustomButton(
+                      text: 'Animated Card 6',
+                      to: AnimatedCard6(),
+                    ),
+                  ],
                 ),
-                _CustomButton(
-                  text: 'Rotating cards',
-                  to: AnimatedRotatingCard(),
-                ),
-                _CustomButton(
-                  text: 'Presentation',
-                  to: Presentation(),
-                ),
-                _CustomButton(
-                  text: 'Half Circle',
-                  to: HalfCircle(),
-                ),
-                _CustomButton(
-                  text: 'Animated Presentation Card',
-                  to: AnimatedPresentationCard(),
-                ),
-                _CustomButton(
-                  text: 'Dynamic Check Mark',
-                  to: DynamicCheckMark(),
-                ),
-                _CustomButton(
-                  text: 'Animated Align Name',
-                  to: AnimatedAlignName(),
-                ),
-                _CustomButton(
-                  text: 'Animated Align Text',
-                  to: AnimatedAlignText(),
-                ),
-                _CustomButton(
-                  text: '3D Planes',
-                  to: ThreeDPlanes(),
-                ),
-                _CustomButton(
-                  text: 'Animated Menu',
-                  to: AnimatedMenu(),
-                ),
-                _CustomButton(
-                  text: 'Staggered Menu Widget',
-                  to: StaggeredMenu(),
-                ),
-                _CustomButton(
-                  text: 'Expandable Credit Card',
-                  to: AnimatedCard2(),
-                ),
-                _CustomButton(
-                  text: 'Expandable Profile Card',
-                  to: AnimatedCard3(),
-                ),
-                _CustomButton(
-                  text: 'Expandable Task Card',
-                  to: AnimatedCard4(),
-                ),
-                _CustomButton(
-                  text: 'Rotating numbers',
-                  to: AnimatedCircleNumbers(),
-                ),
-                _CustomButton(
-                  text: 'Animated counter',
-                  to: AnimatedCounter(),
-                ),
-                _CustomButton(
-                  text: 'Animated Expandable Menu',
-                  to: AnimatedExpandableMenu(),
-                ),
-                _CustomButton(
-                  text: 'Animated Card Rotation',
-                  to: AnimatedCard5(),
-                ),
-                _CustomButton(
-                  text: 'Animated Card 6',
-                  to: AnimatedCard6(),
-                ),
-              ],
+              ),
             ),
           ),
         ),
@@ -122,17 +129,45 @@ class _CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 300,
-      child: FilledButton(
-        onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute<void>(
-              builder: (BuildContext context) => to,
-            ),
-          );
-        },
-        child: Text(text),
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute<void>(
+            builder: (BuildContext context) => to,
+          ),
+        );
+      },
+      child: Container(
+        height: 50,
+        width: 300,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black38,
+              offset: Offset(0, 6),
+              blurRadius: 10,
+              spreadRadius: 0,
+            )
+          ],
+          gradient: LinearGradient(
+            colors: [
+              Colors.orange[900]!,
+              Colors.orange[600]!,
+              Colors.orange[300]!,
+              Colors.yellow[600]!,
+            ],
+          ),
+        ),
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }
