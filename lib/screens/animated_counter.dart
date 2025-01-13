@@ -164,7 +164,7 @@ class _AnimatedCounterState extends State<AnimatedCounter>
                             child: Transform(
                               alignment: Alignment.bottomCenter,
                               transform: Matrix4.identity()
-                                ..setEntry(3, 2, 0.001)
+                                ..setEntry(3, 2, 0.002)
                                 ..rotateX((numberChangeValue.value) * pi),
                               child: ClipRRect(
                                 borderRadius: const BorderRadius.vertical(
