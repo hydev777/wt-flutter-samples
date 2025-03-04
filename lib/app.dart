@@ -99,6 +99,14 @@ class App extends StatelessWidget {
                       text: 'Animated Card 6',
                       to: AnimatedCard6(),
                     ),
+                    _CustomButton(
+                      text: 'Animated List',
+                      to: AnimatedList1(),
+                    ),
+                    _CustomButton(
+                      text: 'Slivers Cards Animation',
+                      to: SliversCardsAnimation(),
+                    ),
                   ],
                 ),
               ),
