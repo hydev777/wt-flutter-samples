@@ -80,7 +80,7 @@ class _Persona5AnimationState extends State<Persona5Animation> with TickerProvid
                   child: Container(
                     width: 600,
                     height: 800,
-                    transform: Matrix4.identity()..rotateZ((2 * math.pi) / 0.992),
+                    transform: Matrix4.identity()..rotateZ((2 * math.pi) / 0.990),
                     decoration: BoxDecoration(
                       color: const Color(0xFFAF0000),
                       border: Border.all(
