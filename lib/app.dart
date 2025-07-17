@@ -107,6 +107,15 @@ class App extends StatelessWidget {
                       text: 'Slivers Cards Animation',
                       to: SliversCardsAnimation(),
                     ),
+                    _CustomButton(
+                      text: 'Balance Card Animation',
+                      to: BalanceCardAnimation(),
+                    ),
+                    _CustomButton(
+                      text: 'Persona 5 animation',
+                      to: Persona5Animation(),
+                    ),
+                    
                   ],
                 ),
               ),

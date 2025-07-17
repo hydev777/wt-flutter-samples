@@ -62,14 +62,6 @@ class _AnimatedExpandedContainerState extends State<AnimatedExpandedContainer>
       reverseCurve: Curves.bounceIn,
     ),
   );
-  late final Animation<double> _opacity =
-      Tween<double>(begin: 0, end: 1).animate(
-    CurvedAnimation(
-      parent: _animationController,
-      curve: Curves.bounceOut,
-      reverseCurve: Curves.bounceIn,
-    ),
-  );
 
   @override
   void initState() {

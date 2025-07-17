@@ -21,3 +21,6 @@ export 'three_d_planes.dart';
 export 'worlds_animation.dart';
 export 'animated_list.dart';
 export 'slivers_cards_animation.dart';
+export 'balance_card_animation.dart';
+export 'animated_horizontal_list.dart';
+export 'persona_5_animation.dart';
